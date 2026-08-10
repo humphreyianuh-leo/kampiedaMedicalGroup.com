@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>KampieDa Medical Group & Behavioral Health, Corp.</title>
+<meta name="description" content="Compassionate, whole-person healthcare integrating primary care, psychiatry, and behavioral health — in person and via telehealth." />
+<link rel="icon" type="image/png" href="brand_assets/Logo.png" />
+<meta name="theme-color" content="#062A53" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          navy: '#062A53',
+          medblue: '#087DB8',
+          clinicalblue: '#0BA4DB',
+          gold: '#D6A33B',
+          heartred: '#B71924',
+          softgray: '#F4F7F9',
+          charcoal: '#172A3A',
+        },
+        fontFamily: {
+          heading: ['Merriweather', 'serif'],
+          body: ['Inter', 'sans-serif'],
+        },
+        boxShadow: {
+          soft: '0 1px 2px rgba(6,42,83,0.06), 0 4px 14px rgba(6,42,83,0.08)',
+          elevated: '0 4px 10px rgba(6,42,83,0.10), 0 14px 28px rgba(6,42,83,0.14)',
+          floating: '0 10px 20px rgba(6,42,83,0.14), 0 28px 56px rgba(6,42,83,0.18)',
+          goldglow: '0 6px 20px rgba(214,163,59,0.35)',
+        },
+      },
+    },
+  };
+</script>
+
+<style>
+  :root { --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1); --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1); }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; color: #172A3A; background-color: #ffffff; }
+  h1, h2, h3, .font-heading { font-family: 'Merriweather', serif; }
+
+  .img-tint { position: relative; }
+  .img-tint::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(6,42,83,0) 45%, rgba(6,42,83,0.5) 100%), rgba(8,125,184,0.14);
+    mix-blend-mode: multiply;
+  }
+
+  .btn-press { transition: transform 0.25s var(--ease-spring), box-shadow 0.35s var(--ease-smooth), background-color 0.3s var(--ease-smooth); }
+  .btn-press:hover { transform: translateY(-2px); }
+  .btn-press:active { transform: translateY(0px) scale(0.98); }
+
+  .row-hover { transition: background-color 0.3s var(--ease-smooth), padding-left 0.3s var(--ease-smooth); }
+  .row-hover:hover { background-color: rgba(8,125,184,0.06); padding-left: 0.5rem; }
+  .row-hover:hover .row-chevron { transform: translateX(4px); }
+  .row-chevron { transition: transform 0.3s var(--ease-spring); }
+
+  .focus-ring:focus-visible { outline: 2px solid #0BA4DB; outline-offset: 3px; border-radius: 4px; }
+
+  #mobile-menu { transition: max-height 0.4s var(--ease-smooth), opacity 0.3s var(--ease-smooth); }
+
+  @keyframes fade-up { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  .fade-up { animation: fade-up 0.7s var(--ease-smooth) both; }
+  .fade-up-1 { animation-delay: .05s; } .fade-up-2 { animation-delay: .15s; } .fade-up-3 { animation-delay: .25s; }
+</style>
+</head>
+
+<body class="bg-white text-charcoal antialiased">
+
+<!-- Thin top utility bar -->
+<div class="bg-navy text-white/80 text-xs">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 py-2 flex items-center justify-between">
+    <span class="hidden sm:inline tracking-wide">Healing Minds. Strengthening Bodies. Restoring Lives.</span>
+    <div class="flex items-center gap-5 ml-auto">
+      <a href="#resources" class="hover:text-gold transition-colors focus-ring">Patient Portal</a>
+      <a href="tel:+15404462610" class="hover:text-gold transition-colors focus-ring">(540) 446-2610</a>
+    </div>
+  </div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-soft">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+
+      <a href="#top" class="flex items-center gap-3 focus-ring">
+        <img src="brand_assets/Logo.png" alt="KampieDa Medical Group & Behavioral Health, Corp. crest logo" class="h-14 w-14 object-contain" />
+        <span class="flex flex-col leading-tight">
+          <span class="font-heading font-bold text-navy text-xl tracking-tight">KampieDa</span>
+          <span class="text-[10px] font-semibold tracking-[0.14em] text-gold uppercase">Medical Group &amp; Behavioral Health</span>
+        </span>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-8">
+        <a href="#services" class="text-sm font-semibold text-charcoal/80 hover:text-navy focus-ring">Services</a>
+        <a href="#appointment" class="text-sm font-semibold text-charcoal/80 hover:text-navy focus-ring">Affordable Care</a>
+        <a href="#portal" class="text-sm font-semibold text-charcoal/80 hover:text-navy focus-ring">Patient Portal</a>
+        <a href="#info" class="text-sm font-semibold text-charcoal/80 hover:text-navy focus-ring">Patient Info</a>
+        <a href="contact.html" class="text-sm font-semibold text-charcoal/80 hover:text-navy focus-ring">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <button aria-label="Search" class="hidden md:inline-flex p-2 rounded-lg text-navy hover:bg-softgray focus-ring">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+        <a href="contact.html#send-message" class="btn-press hidden sm:inline-flex items-center rounded-full bg-medblue text-white text-sm font-semibold px-6 py-2.5 shadow-elevated hover:bg-navy focus-ring">
+          Make an Appointment
+        </a>
+        <button id="menu-btn" aria-label="Toggle menu" aria-expanded="false" class="lg:hidden p-2 rounded-lg text-navy hover:bg-softgray focus-ring">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <nav id="mobile-menu" class="lg:hidden overflow-hidden max-h-0 opacity-0">
+      <div class="flex flex-col gap-1 pb-5 pt-1">
+        <a href="#services" class="px-3 py-2.5 rounded-lg text-sm font-semibold text-charcoal hover:bg-softgray focus-ring">Services</a>
+        <a href="#appointment" class="px-3 py-2.5 rounded-lg text-sm font-semibold text-charcoal hover:bg-softgray focus-ring">Affordable Care</a>
+        <a href="#portal" class="px-3 py-2.5 rounded-lg text-sm font-semibold text-charcoal hover:bg-softgray focus-ring">Patient Portal</a>
+        <a href="#info" class="px-3 py-2.5 rounded-lg text-sm font-semibold text-charcoal hover:bg-softgray focus-ring">Patient Info</a>
+        <a href="contact.html" class="px-3 py-2.5 rounded-lg text-sm font-semibold text-charcoal hover:bg-softgray focus-ring">Contact</a>
+        <a href="contact.html#send-message" class="mt-2 text-center rounded-full bg-medblue text-white text-sm font-semibold px-6 py-3 shadow-elevated focus-ring">Make an Appointment</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<div id="top"></div>
+
+<!-- ============ HERO BANNER (full-bleed image, content below) ============ -->
+<div class="img-tint w-full h-[280px] sm:h-[360px] lg:h-[440px] overflow-hidden">
+  <img src="https://images.pexels.com/photos/7579831/pexels-photo-7579831.jpeg?auto=compress&cs=tinysrgb&w=1800" alt="A smiling Black doctor consulting warmly with a patient in a bright office" class="w-full h-full object-cover object-[center_30%]" />
+</div>
+
+<section class="bg-white">
+  <div class="max-w-4xl mx-auto px-6 lg:px-8 pt-10 pb-6">
+    <p class="fade-up text-xs font-bold tracking-[0.14em] uppercase text-medblue">
+      <a href="#top" class="hover:text-navy focus-ring">Home</a> &nbsp;&rsaquo;&nbsp; Whole-Person Care
+    </p>
+    <h1 class="fade-up fade-up-1 font-heading font-bold text-3xl sm:text-4xl lg:text-[2.6rem] text-navy tracking-[-0.02em] mt-3">
+      Whole-Person Care for Mind &amp; Body
+    </h1>
+
+    <p class="fade-up fade-up-2 mt-6 text-charcoal/75 leading-[1.75]">
+      Your health deserves care that considers the whole person. If you are well, we can help you stay that way. If you are sick, we can help you get better. Our medical and behavioral health providers work together to support better physical and emotional wellness.
+    </p>
+    <p class="fade-up fade-up-2 mt-4 text-charcoal/75 leading-[1.75]">
+      Most of our providers are Family Physicians, Psychiatric Providers, or Licensed Counselors. They provide care to people of all ages &mdash; children, adults, and families &mdash; regardless of your ability to pay. No matter who you are, we&rsquo;re here to help.
+    </p>
+
+    <p class="fade-up fade-up-3 mt-8 font-heading font-bold text-navy">We offer:</p>
+    <ul class="fade-up fade-up-3 mt-3 divide-y divide-navy/10 border-t border-b border-navy/10">
+      <li class="py-3 flex items-center gap-3 text-charcoal/80"><span class="w-1.5 h-1.5 rounded-full bg-gold shrink-0"></span>Primary care check-ups &amp; preventive medicine</li>
+      <li class="py-3 flex items-center gap-3 text-charcoal/80"><span class="w-1.5 h-1.5 rounded-full bg-gold shrink-0"></span>Psychiatric evaluation &amp; medication management</li>
+      <li class="py-3 flex items-center gap-3 text-charcoal/80"><span class="w-1.5 h-1.5 rounded-full bg-gold shrink-0"></span>Individual, family &amp; behavioral health counseling</li>
+      <li class="py-3 flex items-center gap-3 text-charcoal/80"><span class="w-1.5 h-1.5 rounded-full bg-gold shrink-0"></span>Secure telehealth visits for medical &amp; behavioral care</li>
+      <li class="py-3 flex items-center gap-3 text-charcoal/80"><span class="w-1.5 h-1.5 rounded-full bg-gold shrink-0"></span>Care for chronic conditions, including diabetes &amp; hypertension</li>
+      <li class="py-3 flex items-center gap-3 text-charcoal/80"><span class="w-1.5 h-1.5 rounded-full bg-gold shrink-0"></span>&hellip;and much more</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ MAKE AN APPOINTMENT CTA BAND ============ -->
+<section id="appointment" class="bg-clinicalblue/10 border-y border-clinicalblue/20">
+  <div class="max-w-3xl mx-auto px-6 lg:px-8 py-14 text-center">
+    <h2 class="font-heading font-bold text-2xl sm:text-3xl text-navy">Make an Appointment</h2>
+    <p class="mt-3 text-charcoal/70">We welcome everyone at our centers.</p>
+    <a href="contact.html#send-message" class="btn-press inline-flex items-center mt-6 rounded-full bg-medblue text-white font-semibold px-8 py-3.5 shadow-elevated hover:bg-navy focus-ring">
+      Make an Appointment
+    </a>
+  </div>
+</section>
+
+<!-- ============ CORE MESSAGING PILLARS ============ -->
+<section class="bg-softgray py-16 lg:py-20">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="max-w-2xl mx-auto text-center mb-12">
+      <span class="text-xs font-bold tracking-[0.16em] uppercase text-medblue">Our Commitment</span>
+      <h2 class="font-heading font-bold text-2xl sm:text-3xl text-navy tracking-[-0.02em] mt-3">The KampieDa Standard of Care</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+      <div class="text-center sm:text-left">
+        <div class="relative w-14 h-14 mx-auto sm:mx-0 rounded-full bg-white border border-navy/10 shadow-soft flex items-center justify-center">
+          <svg class="w-6 h-6 text-navy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          <span class="absolute -top-1 -right-1 w-3 h-3 rounded-full bg-gold border-2 border-softgray"></span>
+        </div>
+        <h3 class="font-heading font-bold text-navy mt-4">Whole-Person Care</h3>
+        <p class="text-sm text-charcoal/65 mt-2 leading-[1.7]">Physical and mental health are connected &mdash; our care model treats them that way.</p>
+      </div>
+
+      <div class="text-center sm:text-left">
+        <div class="relative w-14 h-14 mx-auto sm:mx-0 rounded-full bg-white border border-navy/10 shadow-soft flex items-center justify-center">
+          <svg class="w-6 h-6 text-medblue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/></svg>
+          <span class="absolute -top-1 -right-1 w-3 h-3 rounded-full bg-gold border-2 border-softgray"></span>
+        </div>
+        <h3 class="font-heading font-bold text-navy mt-4">Compassionate Care</h3>
+        <p class="text-sm text-charcoal/65 mt-2 leading-[1.7]">You&rsquo;ll be heard, respected, and understood at every visit.</p>
+      </div>
+
+      <div class="text-center sm:text-left">
+        <div class="relative w-14 h-14 mx-auto sm:mx-0 rounded-full bg-white border border-navy/10 shadow-soft flex items-center justify-center">
+          <svg class="w-6 h-6 text-navy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17.3 6.2 21l1.6-6.9L2 9.2l7-.6L12 2l3 6.6 7 .6-5.8 4.9 1.6 6.9Z"/></svg>
+          <span class="absolute -top-1 -right-1 w-3 h-3 rounded-full bg-gold border-2 border-softgray"></span>
+        </div>
+        <h3 class="font-heading font-bold text-navy mt-4">Clinical Excellence</h3>
+        <p class="text-sm text-charcoal/65 mt-2 leading-[1.7]">Qualified professionals held to responsible, consistent standards of care.</p>
+      </div>
+
+      <div class="text-center sm:text-left">
+        <div class="relative w-14 h-14 mx-auto sm:mx-0 rounded-full bg-white border border-navy/10 shadow-soft flex items-center justify-center">
+          <svg class="w-6 h-6 text-medblue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span class="absolute -top-1 -right-1 w-3 h-3 rounded-full bg-gold border-2 border-softgray"></span>
+        </div>
+        <h3 class="font-heading font-bold text-navy mt-4">Accessible Care</h3>
+        <p class="text-sm text-charcoal/65 mt-2 leading-[1.7]">Convenient access through in-person visits and secure telehealth.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ AFFORDABLE / ACCESSIBLE CARE ============ -->
+<section class="bg-white py-16 lg:py-20">
+  <div class="max-w-5xl mx-auto px-6 lg:px-8 grid md:grid-cols-2 gap-10 items-center">
+    <div class="img-tint rounded-2xl overflow-hidden shadow-elevated">
+      <img src="https://images.pexels.com/photos/30677591/pexels-photo-30677591.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="A Black doctor talking warmly with a patient during a checkup in a bright office" class="w-full h-72 object-cover object-[center_30%]" />
+    </div>
+    <div>
+      <span class="text-xs font-bold tracking-[0.16em] uppercase text-medblue">Accessible Care</span>
+      <h2 class="font-heading font-bold text-2xl sm:text-3xl text-navy tracking-[-0.02em] mt-3">Care Shouldn&rsquo;t Wait on Insurance</h2>
+      <p class="mt-4 text-charcoal/70 leading-[1.75]">
+        KampieDa accepts most major insurance plans, including Medicaid and Medicare. If you don&rsquo;t currently have health insurance, our team can help &mdash; ask us about options for getting care based on your situation.
+      </p>
+      <div class="flex flex-wrap gap-3 mt-6">
+        <a href="insurance.html" class="btn-press inline-flex items-center rounded-full bg-navy text-white text-sm font-semibold px-6 py-3 shadow-elevated hover:bg-medblue focus-ring">Insurance &amp; Billing</a>
+        <a href="contact.html" class="btn-press inline-flex items-center rounded-full border-2 border-navy text-navy text-sm font-semibold px-6 py-3 hover:bg-navy hover:text-white focus-ring">Contact Our Team</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BEHAVIORAL HEALTH ============ -->
+<section class="bg-softgray py-16 lg:py-20">
+  <div class="max-w-5xl mx-auto px-6 lg:px-8 grid md:grid-cols-2 gap-10 items-center">
+    <div>
+      <span class="text-xs font-bold tracking-[0.16em] uppercase text-medblue">Behavioral Health</span>
+      <h2 class="font-heading font-bold text-2xl sm:text-3xl text-navy tracking-[-0.02em] mt-3">Space to Breathe, Support to Heal</h2>
+      <p class="mt-4 text-charcoal/70 leading-[1.75]">
+        Mental health is health. Our behavioral health team offers individual, family, and group counseling in a calm, judgment-free space &mdash; because restoring balance in your life starts with feeling truly heard.
+      </p>
+      <div class="flex flex-wrap gap-3 mt-6">
+        <a href="behavioral-health.html#care-team" class="btn-press inline-flex items-center rounded-full bg-navy text-white text-sm font-semibold px-6 py-3 shadow-elevated hover:bg-medblue focus-ring">Meet Our Counselors</a>
+        <a href="behavioral-health.html" class="btn-press inline-flex items-center rounded-full border-2 border-navy text-navy text-sm font-semibold px-6 py-3 hover:bg-navy hover:text-white focus-ring">Learn More</a>
+      </div>
+    </div>
+    <div class="img-tint rounded-2xl overflow-hidden shadow-elevated">
+      <img src="images/behavioral-health-wellness.png" alt="A woman relaxing peacefully with a warm drink in soft morning light" class="w-full h-72 md:h-96 object-cover" />
+    </div>
+  </div>
+</section>
+
+<!-- ============ PATIENT PORTAL ============ -->
+<section id="portal" class="bg-white py-14">
+  <div class="max-w-3xl mx-auto px-6 lg:px-8 flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
+    <div class="w-16 h-16 rounded-full bg-navy flex items-center justify-center shrink-0 shadow-elevated">
+      <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.5-6 8-6s8 2 8 6"/></svg>
+    </div>
+    <div class="flex-1">
+      <p class="text-xs font-bold tracking-[0.14em] uppercase text-medblue">MyKampieDa Patient Portal</p>
+      <p class="mt-1 text-charcoal/70">If you are a current patient, use MyKampieDa to message your care team, view test results, schedule appointments, and more.</p>
+    </div>
+    <a href="#contact" class="btn-press shrink-0 inline-flex items-center rounded-full bg-medblue text-white text-sm font-semibold px-6 py-3 shadow-elevated hover:bg-navy focus-ring">Go to MyKampieDa</a>
+  </div>
+</section>
+
+<!-- ============ PATIENT INFO — "I WANT TO..." ============ -->
+<section id="info" class="bg-navy/[0.04] py-16 lg:py-20">
+  <div class="max-w-3xl mx-auto px-6 lg:px-8">
+    <span class="text-xs font-bold tracking-[0.16em] uppercase text-medblue">Patient Information</span>
+    <h2 class="font-heading font-bold text-2xl sm:text-3xl text-navy tracking-[-0.02em] mt-3">I want to&hellip;</h2>
+
+    <ul class="mt-8 divide-y divide-navy/10 border-t border-navy/10">
+      <li><a href="#providers" class="row-hover focus-ring flex items-center justify-between py-4 font-heading font-semibold text-navy">Find a Provider <svg class="row-chevron w-4 h-4 text-medblue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></a></li>
+      <li><a href="contact.html#send-message" class="row-hover focus-ring flex items-center justify-between py-4 font-heading font-semibold text-navy">Make an Appointment <svg class="row-chevron w-4 h-4 text-medblue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></a></li>
+      <li><a href="#portal" class="row-hover focus-ring flex items-center justify-between py-4 font-heading font-semibold text-navy">Access the Patient Portal <svg class="row-chevron w-4 h-4 text-medblue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></a></li>
+      <li><a href="#services" class="row-hover focus-ring flex items-center justify-between py-4 font-heading font-semibold text-navy">Learn About Our Services <svg class="row-chevron w-4 h-4 text-medblue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></a></li>
+      <li><a href="insurance.html" class="row-hover focus-ring flex items-center justify-between py-4 font-heading font-semibold text-navy">See Insurance Info <svg class="row-chevron w-4 h-4 text-medblue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></a></li>
+      <li><a href="form-preview.html" class="row-hover focus-ring flex items-center justify-between py-4 font-heading font-semibold text-navy">New Patient Form <svg class="row-chevron w-4 h-4 text-medblue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></a></li>
+      <li><a href="contact.html" class="row-hover focus-ring flex items-center justify-between py-4 font-heading font-semibold text-navy">Contact Us <svg class="row-chevron w-4 h-4 text-medblue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ SERVICES (quick strip) ============ -->
+<section id="services" class="bg-white py-16 lg:py-20">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="max-w-2xl mx-auto text-center mb-12">
+      <span class="text-xs font-bold tracking-[0.16em] uppercase text-medblue">Our Services</span>
+      <h2 class="font-heading font-bold text-2xl sm:text-3xl text-navy tracking-[-0.02em] mt-3">Comprehensive Care, All in One Place</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+      <a href="primary-care.html" class="card-lift group block rounded-2xl border border-navy/5 shadow-soft hover:shadow-floating p-6 transition-shadow duration-500 focus-ring">
+        <div class="relative w-12 h-12 rounded-full bg-softgray border border-navy/10 flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-navy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M12 3v6m0 0v6m0-6h6m-6 0H6"/><rect x="4" y="3" width="16" height="18" rx="2"/></svg>
+          <span class="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-gold border-2 border-white"></span>
+        </div>
+        <h3 class="font-heading font-bold text-navy">Primary Care</h3>
+        <p class="text-sm text-charcoal/65 mt-2 leading-[1.7]">Preventive checkups &amp; chronic condition management.</p>
+        <span class="inline-flex items-center gap-1.5 mt-4 text-sm font-semibold text-medblue">Learn more
+          <svg class="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </span>
+      </a>
+      <a href="psychiatry.html" class="card-lift group block rounded-2xl border border-navy/5 shadow-soft hover:shadow-floating p-6 transition-shadow duration-500 focus-ring">
+        <div class="relative w-12 h-12 rounded-full bg-softgray border border-navy/10 flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-medblue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M9.5 3a3.5 3.5 0 0 0-3.5 3.5v.6A3 3 0 0 0 4 9.9v1.2a3 3 0 0 0 1.3 2.5A3.5 3.5 0 0 0 9 18h1V3.4A3.4 3.4 0 0 0 9.5 3Z"/><path d="M14.5 3A3.5 3.5 0 0 1 18 6.5v.6A3 3 0 0 1 20 9.9v1.2a3 3 0 0 1-1.3 2.5A3.5 3.5 0 0 1 15 18h-1V3.4A3.4 3.4 0 0 1 14.5 3Z"/></svg>
+          <span class="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-gold border-2 border-white"></span>
+        </div>
+        <h3 class="font-heading font-bold text-navy">Psychiatry</h3>
+        <p class="text-sm text-charcoal/65 mt-2 leading-[1.7]">Evaluation &amp; medication management.</p>
+        <span class="inline-flex items-center gap-1.5 mt-4 text-sm font-semibold text-medblue">Learn more
+          <svg class="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </span>
+      </a>
+      <a href="behavioral-health.html" class="card-lift group block rounded-2xl border border-navy/5 shadow-soft hover:shadow-floating p-6 transition-shadow duration-500 focus-ring">
+        <div class="relative w-12 h-12 rounded-full bg-softgray border border-navy/10 flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-heartred" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/></svg>
+          <span class="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-gold border-2 border-white"></span>
+        </div>
+        <h3 class="font-heading font-bold text-navy">Behavioral Health</h3>
+        <p class="text-sm text-charcoal/65 mt-2 leading-[1.7]">Individual &amp; family counseling.</p>
+        <span class="inline-flex items-center gap-1.5 mt-4 text-sm font-semibold text-medblue">Learn more
+          <svg class="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </span>
+      </a>
+      <a href="telehealth.html" class="card-lift group block rounded-2xl border border-navy/5 shadow-soft hover:shadow-floating p-6 transition-shadow duration-500 focus-ring">
+        <div class="relative w-12 h-12 rounded-full bg-softgray border border-navy/10 flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-navy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          <span class="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-gold border-2 border-white"></span>
+        </div>
+        <h3 class="font-heading font-bold text-navy">Telehealth</h3>
+        <p class="text-sm text-charcoal/65 mt-2 leading-[1.7]">Secure virtual visits, from anywhere.</p>
+        <span class="inline-flex items-center gap-1.5 mt-4 text-sm font-semibold text-medblue">Learn more
+          <svg class="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </span>
+      </a>
+      <a href="weight-loss.html" class="card-lift group block rounded-2xl border border-navy/5 shadow-soft hover:shadow-floating p-6 transition-shadow duration-500 focus-ring">
+        <div class="relative w-12 h-12 rounded-full bg-softgray border border-navy/10 flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-medblue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M9 12h6M12 9v6"/></svg>
+          <span class="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-gold border-2 border-white"></span>
+        </div>
+        <h3 class="font-heading font-bold text-navy">Weight Loss</h3>
+        <p class="text-sm text-charcoal/65 mt-2 leading-[1.7]">Physician-guided medication management.</p>
+        <span class="inline-flex items-center gap-1.5 mt-4 text-sm font-semibold text-medblue">Learn more
+          <svg class="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOURS OF OPERATION ============ -->
+<section id="hours" class="bg-softgray py-16 lg:py-20">
+  <div class="max-w-3xl mx-auto px-6 lg:px-8">
+    <div class="max-w-2xl mx-auto text-center mb-12">
+      <span class="text-xs font-bold tracking-[0.16em] uppercase text-medblue">Hours of Operation</span>
+      <h2 class="font-heading font-bold text-2xl sm:text-3xl text-navy tracking-[-0.02em] mt-3">We&rsquo;re Here When You Need Us</h2>
+    </div>
+
+    <div class="bg-white rounded-2xl border border-navy/5 shadow-elevated overflow-hidden">
+      <div class="flex items-center gap-3 px-7 py-5 bg-navy">
+        <svg class="w-5 h-5 text-gold shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        <p class="font-heading font-bold text-white text-sm tracking-wide">Weekly Schedule</p>
+      </div>
+      <ul class="divide-y divide-navy/10">
+        <li class="flex items-center justify-between px-7 py-5">
+          <span class="font-heading font-semibold text-navy">Monday &ndash; Friday</span>
+          <span class="text-charcoal/70 font-medium">8:00 AM &ndash; 9:00 PM</span>
+        </li>
+        <li class="flex items-center justify-between px-7 py-5">
+          <span class="font-heading font-semibold text-navy">Saturday &ndash; Sunday</span>
+          <span class="text-charcoal/70 font-medium">8:00 AM &ndash; 9:00 PM</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LOCATIONS WE SERVE ============ -->
+<section id="locations" class="bg-white py-16 lg:py-20">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="max-w-2xl mx-auto text-center mb-12">
+      <span class="text-xs font-bold tracking-[0.16em] uppercase text-medblue">Where We Serve</span>
+      <h2 class="font-heading font-bold text-2xl sm:text-3xl text-navy tracking-[-0.02em] mt-3">Locations We Provide Care</h2>
+      <p class="mt-4 text-charcoal/70 leading-[1.75]">KampieDa serves patients across four states. Availability varies by location &mdash; see below for what&rsquo;s offered near you.</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+      <div class="rounded-2xl border border-navy/5 shadow-soft hover:shadow-floating p-6 transition-shadow duration-500">
+        <div class="w-12 h-12 rounded-full bg-softgray border border-navy/10 flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-navy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h3 class="font-heading font-bold text-navy">Virginia</h3>
+        <span class="inline-block mt-2 text-xs font-bold tracking-wide text-medblue bg-medblue/10 rounded-full px-3 py-1">IN-PERSON &amp; TELEHEALTH</span>
+        <p class="text-sm text-charcoal/65 mt-3 leading-[1.7]">Our main office, located in Vienna. Full primary care, behavioral health, and telehealth services.</p>
+      </div>
+
+      <div class="rounded-2xl border border-navy/5 shadow-soft hover:shadow-floating p-6 transition-shadow duration-500">
+        <div class="w-12 h-12 rounded-full bg-softgray border border-navy/10 flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-navy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h3 class="font-heading font-bold text-navy">Maryland</h3>
+        <span class="inline-block mt-2 text-xs font-bold tracking-wide text-medblue bg-medblue/10 rounded-full px-3 py-1">IN-PERSON &amp; TELEHEALTH</span>
+        <p class="text-sm text-charcoal/65 mt-3 leading-[1.7]">Patients can be seen at our Virginia office or connect with their care team by telehealth.</p>
+      </div>
+
+      <div class="rounded-2xl border border-navy/5 shadow-soft hover:shadow-floating p-6 transition-shadow duration-500">
+        <div class="w-12 h-12 rounded-full bg-softgray border border-navy/10 flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <h3 class="font-heading font-bold text-navy">Washington, D.C.</h3>
+        <span class="inline-block mt-2 text-xs font-bold tracking-wide text-gold bg-gold/10 rounded-full px-3 py-1">TELEHEALTH ONLY</span>
+        <p class="text-sm text-charcoal/65 mt-3 leading-[1.7]">Virtual primary care and behavioral health visits, currently available by telehealth only.</p>
+      </div>
+
+      <div class="rounded-2xl border border-navy/5 shadow-soft hover:shadow-floating p-6 transition-shadow duration-500">
+        <div class="w-12 h-12 rounded-full bg-softgray border border-navy/10 flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <h3 class="font-heading font-bold text-navy">New York</h3>
+        <span class="inline-block mt-2 text-xs font-bold tracking-wide text-gold bg-gold/10 rounded-full px-3 py-1">TELEHEALTH ONLY</span>
+        <p class="text-sm text-charcoal/65 mt-3 leading-[1.7]">Virtual primary care and behavioral health visits, currently available by telehealth only.</p>
+      </div>
+
+    </div>
+
+    <p class="text-center text-sm text-charcoal/50 mt-8">Not sure if we serve your area? <a href="contact.html#send-message" class="text-medblue font-semibold hover:text-navy transition-colors focus-ring">Reach out</a> and we&rsquo;ll help you find the right care.</p>
+  </div>
+</section>
+
+<!-- ============ FIND US / MAP ============ -->
+<section class="bg-softgray py-16 lg:py-20">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="grid lg:grid-cols-3 gap-10 items-start">
+
+      <div class="lg:col-span-1">
+        <span class="text-xs font-bold tracking-[0.16em] uppercase text-medblue">Find Us</span>
+        <h2 class="font-heading font-bold text-2xl sm:text-3xl text-navy tracking-[-0.02em] mt-3">Visit Our Office</h2>
+        <p class="mt-4 text-charcoal/70 leading-[1.75]">
+          8300 Boone Blvd, Ste #573<br />
+          Vienna, VA 22182
+        </p>
+        <p class="mt-4 text-charcoal/70">
+          <a href="tel:+15404462610" class="hover:text-medblue transition-colors focus-ring font-medium">(540) 446-2610</a>
+        </p>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=8300+Boone+Blvd+Ste+573+Vienna+VA+22182" target="_blank" rel="noopener" class="btn-press inline-flex items-center gap-2 mt-6 rounded-full bg-navy text-white text-sm font-semibold px-6 py-3 shadow-elevated hover:bg-medblue focus-ring">
+          Get Directions
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+
+      <div class="lg:col-span-2">
+        <div class="rounded-2xl overflow-hidden shadow-elevated border border-navy/5">
+          <iframe
+            src="https://www.google.com/maps?q=8300+Boone+Blvd+Ste+573,+Vienna,+VA+22182&output=embed"
+            width="100%"
+            height="420"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Map showing KampieDa Medical Group & Behavioral Health at 8300 Boone Blvd, Ste #573, Vienna, VA 22182">
+          </iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer id="contact" class="bg-navy text-white/80">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-12">
+
+      <div class="lg:col-span-1">
+        <img src="brand_assets/Logo.png" alt="KampieDa crest logo" class="h-16 w-16 object-contain" />
+        <p class="mt-4 text-xs font-semibold tracking-[0.14em] uppercase text-gold">Medical Group &amp; Behavioral Health</p>
+        <p class="mt-2 text-sm leading-[1.7] max-w-xs">Healing Minds. Strengthening Bodies. Restoring Lives.</p>
+      </div>
+
+      <div>
+        <h4 class="font-heading font-bold text-white text-sm tracking-wide">Get Care</h4>
+        <ul class="mt-5 space-y-3 text-sm">
+          <li><a href="#services" class="hover:text-gold transition-colors focus-ring">Services</a></li>
+          <li><a href="#providers" class="hover:text-gold transition-colors focus-ring">Providers</a></li>
+          <li><a href="#portal" class="hover:text-gold transition-colors focus-ring">Patient Portal</a></li>
+          <li><a href="insurance.html" class="hover:text-gold transition-colors focus-ring">Insurance Plans</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-heading font-bold text-white text-sm tracking-wide">Company</h4>
+        <ul class="mt-5 space-y-3 text-sm">
+          <li><a href="#" class="hover:text-gold transition-colors focus-ring">About Us</a></li>
+          <li><a href="#" class="hover:text-gold transition-colors focus-ring">Careers</a></li>
+          <li><a href="#" class="hover:text-gold transition-colors focus-ring">Blog</a></li>
+          <li><a href="contact.html" class="hover:text-gold transition-colors focus-ring">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-heading font-bold text-white text-sm tracking-wide">Join Our Mailing List</h4>
+        <form class="mt-5 flex" onsubmit="return false;">
+          <input type="email" placeholder="Your email" aria-label="Email address" class="focus-ring w-full min-w-0 rounded-l-full bg-white/10 border border-white/20 px-4 py-2.5 text-sm text-white placeholder-white/50 focus:outline-none" />
+          <button type="submit" class="btn-press shrink-0 rounded-r-full bg-gold text-navy font-bold text-sm px-5 focus-ring">Join</button>
+        </form>
+        <div class="flex items-center gap-3 mt-6">
+          <a href="#" aria-label="Facebook" class="btn-press w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold hover:text-navy focus-ring">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14C17.17 2.1 15.9 2 14.6 2 11.9 2 10 3.66 10 6.7V9.5H7v4h3V22h4v-8.5Z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram" class="btn-press w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold hover:text-navy focus-ring">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+          </a>
+          <a href="#" aria-label="LinkedIn" class="btn-press w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold hover:text-navy focus-ring">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 5a2 2 0 1 1-4-.02 2 2 0 0 1 4 .02ZM3.2 8.75h3.5V21H3.2V8.75Zm6.2 0h3.35v1.68h.05c.47-.88 1.6-1.8 3.3-1.8 3.53 0 4.18 2.32 4.18 5.35V21h-3.5v-5.6c0-1.34-.02-3.06-1.87-3.06-1.87 0-2.16 1.46-2.16 2.96V21H9.4V8.75Z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-14 pt-10 border-t border-white/10 grid sm:grid-cols-2 gap-8 max-w-2xl">
+      <div>
+        <p class="font-heading font-bold text-white text-sm">Main Office</p>
+        <p class="text-sm mt-2 leading-[1.8]">8300 Boone Blvd, Ste #573<br />Vienna, VA 22182<br /><a href="tel:+15404462610" class="hover:text-gold transition-colors focus-ring">(540) 446-2610</a><br />
+        <a href="https://wa.me/15404462610" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 mt-1 hover:text-gold transition-colors focus-ring">
+          <svg class="w-3.5 h-3.5 shrink-0" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.2-.1.2-.3.3-.5.1-.2 0-.4 0-.5C10 9 9.4 7.6 9.1 7c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.3-.6-.4Z"/><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.5A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.5-1.2l-.3-.2-3 .9.9-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></svg>
+          Text us on WhatsApp
+        </a></p>
+      </div>
+      <div>
+        <p class="font-heading font-bold text-white text-sm">Behavioral Health Center</p>
+        <p class="text-sm mt-2 leading-[1.8]">8300 Boone Blvd, Ste #573<br />Vienna, VA 22182<br /><a href="tel:+15404462610" class="hover:text-gold transition-colors focus-ring">(540) 446-2610</a><br />
+        <a href="https://wa.me/15404462610" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 mt-1 hover:text-gold transition-colors focus-ring">
+          <svg class="w-3.5 h-3.5 shrink-0" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.2-.1.2-.3.3-.5.1-.2 0-.4 0-.5C10 9 9.4 7.6 9.1 7c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.3-.6-.4Z"/><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.5A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.5-1.2l-.3-.2-3 .9.9-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></svg>
+          Text us on WhatsApp
+        </a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/50">
+      <p>&copy; 2026 KampieDa Medical Group &amp; Behavioral Health, Corp. All rights reserved.</p>
+      <div class="flex items-center gap-6">
+        <a href="#" class="hover:text-gold transition-colors focus-ring">Privacy Statement</a>
+        <a href="#" class="hover:text-gold transition-colors focus-ring">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  btn.addEventListener('click', () => {
+    const isOpen = menu.style.maxHeight && menu.style.maxHeight !== '0px';
+    if (isOpen) {
+      menu.style.maxHeight = '0px';
+      menu.style.opacity = '0';
+      btn.setAttribute('aria-expanded', 'false');
+    } else {
+      menu.style.maxHeight = menu.scrollHeight + 'px';
+      menu.style.opacity = '1';
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+</script>
+
+</body>
+</html>

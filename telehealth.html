@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Telehealth | KampieDa Medical Group & Behavioral Health, Corp.</title>
+<meta name="description" content="Secure, physician-led telehealth visits for primary care and behavioral health — convenient virtual care from wherever you are in Virginia." />
+<link rel="icon" type="image/png" href="brand_assets/Logo.png" />
+<meta name="theme-color" content="#062A53" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          navy: '#062A53',
+          medblue: '#087DB8',
+          clinicalblue: '#0BA4DB',
+          gold: '#D6A33B',
+          heartred: '#B71924',
+          softgray: '#F4F7F9',
+          charcoal: '#172A3A',
+        },
+        fontFamily: {
+          heading: ['Merriweather', 'serif'],
+          body: ['Inter', 'sans-serif'],
+        },
+        boxShadow: {
+          soft: '0 1px 2px rgba(6,42,83,0.06), 0 4px 14px rgba(6,42,83,0.08)',
+          elevated: '0 4px 10px rgba(6,42,83,0.10), 0 14px 28px rgba(6,42,83,0.14)',
+          floating: '0 10px 20px rgba(6,42,83,0.14), 0 28px 56px rgba(6,42,83,0.18)',
+          goldglow: '0 6px 20px rgba(214,163,59,0.35)',
+        },
+      },
+    },
+  };
+</script>
+
+<style>
+  :root { --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1); --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1); }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; color: #172A3A; background-color: #ffffff; }
+  h1, h2, h3, .font-heading { font-family: 'Merriweather', serif; }
+
+  .img-tint { position: relative; }
+  .img-tint::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(6,42,83,0) 45%, rgba(6,42,83,0.5) 100%), rgba(8,125,184,0.14);
+    mix-blend-mode: multiply;
+  }
+
+  .btn-press { transition: transform 0.25s var(--ease-spring), box-shadow 0.35s var(--ease-smooth), background-color 0.3s var(--ease-smooth); }
+  .btn-press:hover { transform: translateY(-2px); }
+  .btn-press:active { transform: translateY(0px) scale(0.98); }
+  .focus-ring:focus-visible { outline: 2px solid #0BA4DB; outline-offset: 3px; border-radius: 4px; }
+  #mobile-menu { transition: max-height 0.4s var(--ease-smooth), opacity 0.3s var(--ease-smooth); }
+
+  details > summary { list-style: none; cursor: pointer; }
+  details > summary::-webkit-details-marker { display: none; }
+  details .faq-chevron { transition: transform 0.3s var(--ease-smooth); }
+  details[open] .faq-chevron { transform: rotate(180deg); }
+  details[open] summary { color: #062A53; }
+
+  @keyframes fade-up { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  .fade-up { animation: fade-up 0.7s var(--ease-smooth) both; }
+  .fade-up-1 { animation-delay: .05s; } .fade-up-2 { animation-delay: .15s; }
+</style>
+</head>
+
+<body class="bg-white text-charcoal antialiased">
+
+<!-- Thin top utility bar -->
+<div class="bg-navy text-white/80 text-xs">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 py-2 flex items-center justify-between">
+    <span class="hidden sm:inline tracking-wide">Healing Minds. Strengthening Bodies. Restoring Lives.</span>
+    <div class="flex items-center gap-5 ml-auto">
+      <a href="index.html#portal" class="hover:text-gold transition-colors focus-ring">Patient Portal</a>
+      <a href="tel:+15404462610" class="hover:text-gold transition-colors focus-ring">(540) 446-2610</a>
+    </div>
+  </div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-soft">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+
+      <a href="index.html" class="flex items-center gap-3 focus-ring">
+        <img src="brand_assets/Logo.png" alt="KampieDa Medical Group & Behavioral Health, Corp. crest logo" class="h-14 w-14 object-contain" />
+        <span class="flex flex-col leading-tight">
+          <span class="font-heading font-bold text-navy text-xl tracking-tight">KampieDa</span>
+          <span class="text-[10px] font-semibold tracking-[0.14em] text-gold uppercase">Medical Group &amp; Behavioral Health</span>
+        </span>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-8">
+        <a href="index.html#services" class="text-sm font-semibold text-charcoal/80 hover:text-navy focus-ring">Services</a>
+        <a href="primary-care.html" class="text-sm font-semibold text-charcoal/80 hover:text-navy focus-ring">Primary Care</a>
+        <a href="behavioral-health.html" class="text-sm font-semibold text-charcoal/80 hover:text-navy focus-ring">Behavioral Health</a>
+        <a href="#faq" class="text-sm font-semibold text-charcoal/80 hover:text-navy focus-ring">FAQ</a>
+        <a href="contact.html" class="text-sm font-semibold text-charcoal/80 hover:text-navy focus-ring">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="contact.html#send-message" class="btn-press hidden sm:inline-flex items-center rounded-full bg-medblue text-white text-sm font-semibold px-6 py-2.5 shadow-elevated hover:bg-navy focus-ring">
+          Request an Appointment
+        </a>
+        <button id="menu-btn" aria-label="Toggle menu" aria-expanded="false" class="lg:hidden p-2 rounded-lg text-navy hover:bg-softgray focus-ring">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <nav id="mobile-menu" class="lg:hidden overflow-hidden max-h-0 opacity-0">
+      <div class="flex flex-col gap-1 pb-5 pt-1">
+        <a href="index.html#services" class="px-3 py-2.5 rounded-lg text-sm font-semibold text-charcoal hover:bg-softgray focus-ring">Services</a>
+        <a href="primary-care.html" class="px-3 py-2.5 rounded-lg text-sm font-semibold text-charcoal hover:bg-softgray focus-ring">Primary Care</a>
+        <a href="behavioral-health.html" class="px-3 py-2.5 rounded-lg text-sm font-semibold text-charcoal hover:bg-softgray focus-ring">Behavioral Health</a>
+        <a href="#faq" class="px-3 py-2.5 rounded-lg text-sm font-semibold text-charcoal hover:bg-softgray focus-ring">FAQ</a>
+        <a href="contact.html" class="px-3 py-2.5 rounded-lg text-sm font-semibold text-charcoal hover:bg-softgray focus-ring">Contact</a>
+        <a href="contact.html#send-message" class="mt-2 text-center rounded-full bg-medblue text-white text-sm font-semibold px-6 py-3 shadow-elevated focus-ring">Request an Appointment</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="top" class="bg-white py-16 lg:py-20">
+  <div class="max-w-5xl mx-auto px-6 lg:px-8">
+    <p class="fade-up text-xs font-bold tracking-[0.16em] uppercase text-medblue">Virtual Care, Real Continuity</p>
+    <h1 class="fade-up fade-up-1 font-heading font-bold text-4xl sm:text-5xl text-navy tracking-[-0.02em] mt-3">Telehealth at KampieDa</h1>
+    <p class="fade-up fade-up-2 mt-5 text-lg text-charcoal/70 leading-[1.75] max-w-2xl">KampieDa offers secure, physician-led telehealth visits for patients in Virginia, Maryland, Washington&nbsp;D.C., and New York. Telehealth lets you connect with your care team without the trip to our office &mdash; while maintaining the same clinical standards, continuity, and privacy as an in-person visit.</p>
+
+    <div class="fade-up fade-up-2 img-tint rounded-2xl overflow-hidden shadow-floating mt-10">
+      <img src="https://images.pexels.com/photos/7195090/pexels-photo-7195090.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="A clinician greeting a patient during a telehealth video visit" class="w-full h-[280px] sm:h-[380px] lg:h-[460px] object-cover" />
+    </div>
+
+    <p class="fade-up fade-up-2 mt-8 text-charcoal/70">Call <a href="tel:+15404462610" class="text-medblue font-semibold hover:text-navy transition-colors focus-ring">(540) 446-2610</a> or email <a href="mailto:info@kampiedaMedicalGroup.com" class="text-medblue font-semibold hover:text-navy transition-colors focus-ring break-all">info@kampiedaMedicalGroup.com</a> to schedule a telehealth appointment.</p>
+  </div>
+</section>
+
+<!-- ============ PHYSICIAN-LED CARE ============ -->
+<section class="bg-softgray py-16 lg:py-20">
+  <div class="max-w-4xl mx-auto px-6 lg:px-8">
+    <h2 class="font-heading font-bold text-2xl sm:text-3xl text-navy tracking-[-0.02em]">Physician-Led Telehealth Care</h2>
+    <p class="mt-4 text-charcoal/70 leading-[1.75]">All telehealth visits at KampieDa are conducted by licensed providers who are authorized to practice medicine in your state. Your virtual visit is a true medical appointment, guided by the same clinical judgment and evidence-based care you&rsquo;d expect in our office.</p>
+    <p class="mt-4 text-charcoal/70 leading-[1.75]">During your telehealth visit, your provider may:</p>
+    <ul class="mt-5 grid sm:grid-cols-2 gap-x-8 gap-y-3">
+      <li class="flex items-start gap-3 text-charcoal/80"><span class="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0"></span>Review your medical history and current concerns</li>
+      <li class="flex items-start gap-3 text-charcoal/80"><span class="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0"></span>Evaluate symptoms and discuss possible diagnoses</li>
+      <li class="flex items-start gap-3 text-charcoal/80"><span class="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0"></span>Prescribe medications when appropriate</li>
+      <li class="flex items-start gap-3 text-charcoal/80"><span class="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0"></span>Order lab work or imaging</li>
+      <li class="flex items-start gap-3 text-charcoal/80"><span class="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0"></span>Coordinate follow-up care and specialist referrals</li>
+      <li class="flex items-start gap-3 text-charcoal/80"><span class="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0"></span>Maintain detailed medical records as part of your chart</li>
+    </ul>
+    <p class="mt-5 text-charcoal/70 leading-[1.75]">This ensures continuity, safety, and accountability across every visit &mdash; virtual or in person.</p>
+  </div>
+</section>
+
+<!-- ============ BEST SUITED FOR / IN-PERSON RECOMMENDED ============ -->
+<section class="bg-white py-16 lg:py-20">
+  <div class="max-w-6xl mx-auto px-6 lg:px-8 grid md:grid-cols-2 gap-8">
+
+    <div class="bg-softgray rounded-2xl border border-navy/5 p-8">
+      <div class="w-12 h-12 rounded-full bg-white border border-navy/10 shadow-soft flex items-center justify-center">
+        <svg class="w-6 h-6 text-medblue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+      </div>
+      <h3 class="font-heading font-bold text-xl text-navy mt-5">What Telehealth Is Best Suited For</h3>
+      <ul class="mt-5 space-y-3">
+        <li class="flex items-start gap-3 text-charcoal/75"><span class="w-1.5 h-1.5 rounded-full bg-medblue mt-2.5 shrink-0"></span>Follow-up visits and ongoing care</li>
+        <li class="flex items-start gap-3 text-charcoal/75"><span class="w-1.5 h-1.5 rounded-full bg-medblue mt-2.5 shrink-0"></span>Medication management and prescription refills</li>
+        <li class="flex items-start gap-3 text-charcoal/75"><span class="w-1.5 h-1.5 rounded-full bg-medblue mt-2.5 shrink-0"></span>Anxiety, stress, and mental health check-ins</li>
+        <li class="flex items-start gap-3 text-charcoal/75"><span class="w-1.5 h-1.5 rounded-full bg-medblue mt-2.5 shrink-0"></span>Review of lab and imaging results</li>
+        <li class="flex items-start gap-3 text-charcoal/75"><span class="w-1.5 h-1.5 rounded-full bg-medblue mt-2.5 shrink-0"></span>Chronic condition monitoring, such as hypertension</li>
+        <li class="flex items-start gap-3 text-charcoal/75"><span class="w-1.5 h-1.5 rounded-full bg-medblue mt-2.5 shrink-0"></span>Preventive care discussions and health planning</li>
+      </ul>
+    </div>
+
+    <div class="bg-navy rounded-2xl p-8 text-white">
+      <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
+        <svg class="w-6 h-6 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v6m0 0v6m0-6h6m-6 0H6"/><rect x="4" y="3" width="16" height="18" rx="2"/></svg>
+      </div>
+      <h3 class="font-heading font-bold text-xl mt-5">When an In-Person Visit Is Recommended</h3>
+      <ul class="mt-5 space-y-3">
+        <li class="flex items-start gap-3 text-white/80"><span class="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0"></span>New or worsening symptoms</li>
+        <li class="flex items-start gap-3 text-white/80"><span class="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0"></span>Physical exams</li>
+        <li class="flex items-start gap-3 text-white/80"><span class="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0"></span>Blood tests, imaging, or in-office procedures</li>
+        <li class="flex items-start gap-3 text-white/80"><span class="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0"></span>Vaccinations</li>
+        <li class="flex items-start gap-3 text-white/80"><span class="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0"></span>Conditions that require direct examination</li>
+      </ul>
+      <p class="mt-5 text-sm text-white/70 leading-[1.7]">Your provider will help determine the right setting so care stays safe and effective, without unnecessary delays.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ WHAT TO EXPECT + TECH/PRIVACY ============ -->
+<section class="bg-softgray py-16 lg:py-20">
+  <div class="max-w-6xl mx-auto px-6 lg:px-8 grid md:grid-cols-2 gap-10">
+    <div>
+      <h2 class="font-heading font-bold text-2xl text-navy tracking-[-0.02em]">What to Expect During a Telehealth Visit</h2>
+      <p class="mt-4 text-charcoal/70 leading-[1.75]">Telehealth visits are private, confidential, and focused on your health concerns. During your appointment, you&rsquo;ll meet with your provider by secure video or phone. Your provider will:</p>
+      <ul class="mt-5 space-y-3">
+        <li class="flex items-start gap-3 text-charcoal/75"><span class="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0"></span>Ask detailed questions about your symptoms and history</li>
+        <li class="flex items-start gap-3 text-charcoal/75"><span class="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0"></span>Discuss possible diagnoses and treatment options</li>
+        <li class="flex items-start gap-3 text-charcoal/75"><span class="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0"></span>Prescribe medication when appropriate</li>
+        <li class="flex items-start gap-3 text-charcoal/75"><span class="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0"></span>Recommend testing or an in-person evaluation if needed</li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="font-heading font-bold text-2xl text-navy tracking-[-0.02em]">Technology &amp; Privacy</h2>
+      <p class="mt-4 text-charcoal/70 leading-[1.75]">Telehealth visits typically require:</p>
+      <ul class="mt-5 space-y-3">
+        <li class="flex items-start gap-3 text-charcoal/75"><span class="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0"></span>A smartphone, tablet, or computer</li>
+        <li class="flex items-start gap-3 text-charcoal/75"><span class="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0"></span>A stable internet or phone connection</li>
+        <li class="flex items-start gap-3 text-charcoal/75"><span class="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0"></span>A private, quiet space</li>
+      </ul>
+      <p class="mt-5 text-charcoal/70 leading-[1.75]">No specialized technical knowledge is required &mdash; our staff can walk you through the setup beforehand and assist with any issues. All visits are conducted using secure platforms that meet medical privacy and confidentiality standards.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHERE WE OFFER TELEHEALTH ============ -->
+<section class="bg-white py-16 lg:py-20">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="max-w-2xl mx-auto text-center mb-12">
+      <span class="text-xs font-bold tracking-[0.16em] uppercase text-medblue">Service Area</span>
+      <h2 class="font-heading font-bold text-2xl sm:text-3xl text-navy tracking-[-0.02em] mt-3">Where We Offer Telehealth</h2>
+      <p class="mt-4 text-charcoal/70 leading-[1.75]">KampieDa currently serves patients in four states. Telehealth availability and in-person options vary by location.</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="rounded-2xl border border-navy/5 shadow-soft p-6">
+        <div class="w-12 h-12 rounded-full bg-softgray border border-navy/10 flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-navy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h3 class="font-heading font-bold text-navy">Virginia</h3>
+        <span class="inline-block mt-2 text-xs font-bold tracking-wide text-medblue bg-medblue/10 rounded-full px-3 py-1">IN-PERSON &amp; TELEHEALTH</span>
+      </div>
+      <div class="rounded-2xl border border-navy/5 shadow-soft p-6">
+        <div class="w-12 h-12 rounded-full bg-softgray border border-navy/10 flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-navy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h3 class="font-heading font-bold text-navy">Maryland</h3>
+        <span class="inline-block mt-2 text-xs font-bold tracking-wide text-medblue bg-medblue/10 rounded-full px-3 py-1">IN-PERSON &amp; TELEHEALTH</span>
+      </div>
+      <div class="rounded-2xl border border-navy/5 shadow-soft p-6">
+        <div class="w-12 h-12 rounded-full bg-softgray border border-navy/10 flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <h3 class="font-heading font-bold text-navy">Washington, D.C.</h3>
+        <span class="inline-block mt-2 text-xs font-bold tracking-wide text-gold bg-gold/10 rounded-full px-3 py-1">TELEHEALTH ONLY</span>
+      </div>
+      <div class="rounded-2xl border border-navy/5 shadow-soft p-6">
+        <div class="w-12 h-12 rounded-full bg-softgray border border-navy/10 flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <h3 class="font-heading font-bold text-navy">New York</h3>
+        <span class="inline-block mt-2 text-xs font-bold tracking-wide text-gold bg-gold/10 rounded-full px-3 py-1">TELEHEALTH ONLY</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INSURANCE ============ -->
+<section class="bg-softgray py-16 lg:py-20">
+  <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+    <h2 class="font-heading font-bold text-2xl sm:text-3xl text-navy tracking-[-0.02em]">Insurance &amp; Telehealth Visits</h2>
+    <p class="mt-4 text-charcoal/70 leading-[1.75]">KampieDa accepts most major insurance plans, including Medicaid and Medicare, for telehealth visits. Coverage can depend on your specific plan and the type of appointment &mdash; our administrative team can help verify your coverage and answer billing questions before your visit.</p>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq" class="bg-white py-16 lg:py-20">
+  <div class="max-w-3xl mx-auto px-6 lg:px-8">
+    <h2 class="font-heading font-bold text-2xl sm:text-3xl text-navy tracking-[-0.02em] text-center">Frequently Asked Questions About Telehealth</h2>
+
+    <div class="mt-10 space-y-4">
+      <details class="bg-white rounded-xl shadow-soft p-6 group">
+        <summary class="flex items-center justify-between font-heading font-semibold text-navy focus-ring">
+          Is telehealth confidential and secure?
+          <svg class="faq-chevron w-4 h-4 text-medblue shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+        </summary>
+        <p class="mt-3 text-sm text-charcoal/70 leading-[1.7]">Yes. Telehealth visits follow the same privacy standards as in-person medical care.</p>
+      </details>
+
+      <details class="bg-white rounded-xl shadow-soft p-6 group">
+        <summary class="flex items-center justify-between font-heading font-semibold text-navy focus-ring">
+          Can prescriptions be provided during telehealth visits?
+          <svg class="faq-chevron w-4 h-4 text-medblue shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+        </summary>
+        <p class="mt-3 text-sm text-charcoal/70 leading-[1.7]">In many cases, yes &mdash; your provider will determine what&rsquo;s appropriate based on your visit and applicable regulations.</p>
+      </details>
+
+      <details class="bg-white rounded-xl shadow-soft p-6 group">
+        <summary class="flex items-center justify-between font-heading font-semibold text-navy focus-ring">
+          Can new patients use telehealth?
+          <svg class="faq-chevron w-4 h-4 text-medblue shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+        </summary>
+        <p class="mt-3 text-sm text-charcoal/70 leading-[1.7]">Yes, new patients are welcome. Some initial visits may require an in-person component depending on your care needs.</p>
+      </details>
+
+      <details class="bg-white rounded-xl shadow-soft p-6 group">
+        <summary class="flex items-center justify-between font-heading font-semibold text-navy focus-ring">
+          What happens if labs or imaging are needed?
+          <svg class="faq-chevron w-4 h-4 text-medblue shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+        </summary>
+        <p class="mt-3 text-sm text-charcoal/70 leading-[1.7]">Your provider will order any needed labs or imaging and coordinate scheduling at our office or a nearby facility.</p>
+      </details>
+
+      <details class="bg-white rounded-xl shadow-soft p-6 group">
+        <summary class="flex items-center justify-between font-heading font-semibold text-navy focus-ring">
+          Can telehealth replace in-person primary care?
+          <svg class="faq-chevron w-4 h-4 text-medblue shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+        </summary>
+        <p class="mt-3 text-sm text-charcoal/70 leading-[1.7]">No. Telehealth is not a replacement for the patient-provider relationship &mdash; it&rsquo;s an extension of it. Virtual visits are fully integrated with your ongoing medical care and record.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="bg-navy text-white">
+  <div class="max-w-3xl mx-auto px-6 lg:px-8 py-20 text-center">
+    <h2 class="font-heading font-bold text-3xl sm:text-4xl tracking-[-0.02em]">Schedule a Telehealth Visit</h2>
+    <p class="mt-4 text-white/75 leading-[1.75] max-w-xl mx-auto">If you&rsquo;re seeking dependable, physician-led telehealth care, KampieDa offers virtual visits that prioritize safety, continuity, and personalized medical judgment.</p>
+    <div class="mt-9 flex flex-wrap justify-center gap-4">
+      <a href="contact.html#send-message" class="btn-press inline-flex items-center rounded-full bg-gold text-navy font-bold px-7 py-3.5 shadow-goldglow hover:bg-[#e3b354] focus-ring">Request an Appointment</a>
+      <a href="tel:+15404462610" class="btn-press inline-flex items-center rounded-full border border-white/30 text-white font-semibold px-7 py-3.5 hover:bg-white/10 focus-ring">(540) 446-2610</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-navy text-white/80 border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-12">
+
+      <div class="lg:col-span-1">
+        <img src="brand_assets/Logo.png" alt="KampieDa crest logo" class="h-16 w-16 object-contain" />
+        <p class="mt-4 text-xs font-semibold tracking-[0.14em] uppercase text-gold">Medical Group &amp; Behavioral Health</p>
+        <p class="mt-2 text-sm leading-[1.7] max-w-xs">Healing Minds. Strengthening Bodies. Restoring Lives.</p>
+      </div>
+
+      <div>
+        <h4 class="font-heading font-bold text-white text-sm tracking-wide">Get Care</h4>
+        <ul class="mt-5 space-y-3 text-sm">
+          <li><a href="index.html#services" class="hover:text-gold transition-colors focus-ring">Services</a></li>
+          <li><a href="index.html#providers" class="hover:text-gold transition-colors focus-ring">Providers</a></li>
+          <li><a href="index.html#portal" class="hover:text-gold transition-colors focus-ring">Patient Portal</a></li>
+          <li><a href="index.html#appointment" class="hover:text-gold transition-colors focus-ring">Insurance Plans</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-heading font-bold text-white text-sm tracking-wide">Company</h4>
+        <ul class="mt-5 space-y-3 text-sm">
+          <li><a href="index.html#" class="hover:text-gold transition-colors focus-ring">About Us</a></li>
+          <li><a href="index.html#" class="hover:text-gold transition-colors focus-ring">Careers</a></li>
+          <li><a href="index.html#" class="hover:text-gold transition-colors focus-ring">Blog</a></li>
+          <li><a href="contact.html" class="hover:text-gold transition-colors focus-ring">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-heading font-bold text-white text-sm tracking-wide">Join Our Mailing List</h4>
+        <form class="mt-5 flex" onsubmit="return false;">
+          <input type="email" placeholder="Your email" aria-label="Email address" class="focus-ring w-full min-w-0 rounded-l-full bg-white/10 border border-white/20 px-4 py-2.5 text-sm text-white placeholder-white/50 focus:outline-none" />
+          <button type="submit" class="btn-press shrink-0 rounded-r-full bg-gold text-navy font-bold text-sm px-5 focus-ring">Join</button>
+        </form>
+        <div class="flex items-center gap-3 mt-6">
+          <a href="#" aria-label="Facebook" class="btn-press w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold hover:text-navy focus-ring">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14C17.17 2.1 15.9 2 14.6 2 11.9 2 10 3.66 10 6.7V9.5H7v4h3V22h4v-8.5Z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram" class="btn-press w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold hover:text-navy focus-ring">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+          </a>
+          <a href="#" aria-label="LinkedIn" class="btn-press w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold hover:text-navy focus-ring">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 5a2 2 0 1 1-4-.02 2 2 0 0 1 4 .02ZM3.2 8.75h3.5V21H3.2V8.75Zm6.2 0h3.35v1.68h.05c.47-.88 1.6-1.8 3.3-1.8 3.53 0 4.18 2.32 4.18 5.35V21h-3.5v-5.6c0-1.34-.02-3.06-1.87-3.06-1.87 0-2.16 1.46-2.16 2.96V21H9.4V8.75Z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/50">
+      <p>&copy; 2026 KampieDa Medical Group &amp; Behavioral Health, Corp. All rights reserved.</p>
+      <div class="flex items-center gap-6">
+        <a href="#" class="hover:text-gold transition-colors focus-ring">Privacy Statement</a>
+        <a href="#" class="hover:text-gold transition-colors focus-ring">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  btn.addEventListener('click', () => {
+    const isOpen = menu.style.maxHeight && menu.style.maxHeight !== '0px';
+    if (isOpen) {
+      menu.style.maxHeight = '0px';
+      menu.style.opacity = '0';
+      btn.setAttribute('aria-expanded', 'false');
+    } else {
+      menu.style.maxHeight = menu.scrollHeight + 'px';
+      menu.style.opacity = '1';
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+</script>
+
+</body>
+</html>

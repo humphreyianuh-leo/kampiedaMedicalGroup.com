@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Primary Care | KampieDa Medical Group & Behavioral Health, Corp.</title>
+<meta name="description" content="Whole-person primary care — preventive medicine, chronic condition management, and coordinated wellness, backed by a team that knows you." />
+<link rel="icon" type="image/png" href="brand_assets/Logo.png" />
+<meta name="theme-color" content="#062A53" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          navy: '#062A53',
+          medblue: '#087DB8',
+          clinicalblue: '#0BA4DB',
+          gold: '#D6A33B',
+          heartred: '#B71924',
+          softgray: '#F4F7F9',
+          charcoal: '#172A3A',
+        },
+        fontFamily: {
+          heading: ['Merriweather', 'serif'],
+          body: ['Inter', 'sans-serif'],
+        },
+        boxShadow: {
+          soft: '0 1px 2px rgba(6,42,83,0.06), 0 4px 14px rgba(6,42,83,0.08)',
+          elevated: '0 4px 10px rgba(6,42,83,0.10), 0 14px 28px rgba(6,42,83,0.14)',
+          floating: '0 10px 20px rgba(6,42,83,0.14), 0 28px 56px rgba(6,42,83,0.18)',
+          goldglow: '0 6px 20px rgba(214,163,59,0.35)',
+        },
+      },
+    },
+  };
+</script>
+
+<style>
+  :root { --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1); --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1); }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; color: #172A3A; background-color: #ffffff; }
+  h1, h2, h3, .font-heading { font-family: 'Merriweather', serif; }
+
+  .img-tint { position: relative; }
+  .img-tint::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(6,42,83,0) 45%, rgba(6,42,83,0.5) 100%), rgba(8,125,184,0.14);
+    mix-blend-mode: multiply;
+  }
+
+  .btn-press { transition: transform 0.25s var(--ease-spring), box-shadow 0.35s var(--ease-smooth), background-color 0.3s var(--ease-smooth); }
+  .btn-press:hover { transform: translateY(-2px); }
+  .btn-press:active { transform: translateY(0px) scale(0.98); }
+  .focus-ring:focus-visible { outline: 2px solid #0BA4DB; outline-offset: 3px; border-radius: 4px; }
+  #mobile-menu { transition: max-height 0.4s var(--ease-smooth), opacity 0.3s var(--ease-smooth); }
+  .card-lift { transition: transform 0.45s var(--ease-smooth), box-shadow 0.45s var(--ease-smooth); }
+  .card-lift:hover { transform: translateY(-6px); }
+
+  @keyframes fade-up { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  .fade-up { animation: fade-up 0.7s var(--ease-smooth) both; }
+  .fade-up-1 { animation-delay: .05s; } .fade-up-2 { animation-delay: .15s; } .fade-up-3 { animation-delay: .25s; }
+</style>
+</head>
+
+<body class="bg-white text-charcoal antialiased">
+
+<!-- Promo strip -->
+<a href="contact.html#send-message" class="block bg-gold text-navy text-center text-xs sm:text-sm font-bold tracking-wide py-2.5 hover:bg-[#e3b354] transition-colors focus-ring">
+  REQUEST A COMPLIMENTARY CONSULTATION &nbsp;&rarr;
+</a>
+
+<!-- Thin top utility bar -->
+<div class="bg-navy text-white/80 text-xs">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 py-2 flex items-center justify-between">
+    <span class="hidden sm:inline tracking-wide">Healing Minds. Strengthening Bodies. Restoring Lives.</span>
+    <div class="flex items-center gap-5 ml-auto">
+      <a href="index.html#portal" class="hover:text-gold transition-colors focus-ring">Patient Portal</a>
+      <a href="tel:+15404462610" class="hover:text-gold transition-colors focus-ring">(540) 446-2610</a>
+    </div>
+  </div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-soft">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+
+      <a href="index.html" class="flex items-center gap-3 focus-ring">
+        <img src="brand_assets/Logo.png" alt="KampieDa Medical Group & Behavioral Health, Corp. crest logo" class="h-14 w-14 object-contain" />
+        <span class="flex flex-col leading-tight">
+          <span class="font-heading font-bold text-navy text-xl tracking-tight">KampieDa</span>
+          <span class="text-[10px] font-semibold tracking-[0.14em] text-gold uppercase">Medical Group &amp; Behavioral Health</span>
+        </span>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-8">
+        <a href="index.html#services" class="text-sm font-semibold text-charcoal/80 hover:text-navy focus-ring">Services</a>
+        <a href="behavioral-health.html" class="text-sm font-semibold text-charcoal/80 hover:text-navy focus-ring">Behavioral Health</a>
+        <a href="#team" class="text-sm font-semibold text-charcoal/80 hover:text-navy focus-ring">Your Care Team</a>
+        <a href="#included" class="text-sm font-semibold text-charcoal/80 hover:text-navy focus-ring">What&rsquo;s Included</a>
+        <a href="contact.html" class="text-sm font-semibold text-charcoal/80 hover:text-navy focus-ring">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="contact.html#send-message" class="btn-press hidden sm:inline-flex items-center rounded-full bg-medblue text-white text-sm font-semibold px-6 py-2.5 shadow-elevated hover:bg-navy focus-ring">
+          Request an Appointment
+        </a>
+        <button id="menu-btn" aria-label="Toggle menu" aria-expanded="false" class="lg:hidden p-2 rounded-lg text-navy hover:bg-softgray focus-ring">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <nav id="mobile-menu" class="lg:hidden overflow-hidden max-h-0 opacity-0">
+      <div class="flex flex-col gap-1 pb-5 pt-1">
+        <a href="index.html#services" class="px-3 py-2.5 rounded-lg text-sm font-semibold text-charcoal hover:bg-softgray focus-ring">Services</a>
+        <a href="behavioral-health.html" class="px-3 py-2.5 rounded-lg text-sm font-semibold text-charcoal hover:bg-softgray focus-ring">Behavioral Health</a>
+        <a href="#team" class="px-3 py-2.5 rounded-lg text-sm font-semibold text-charcoal hover:bg-softgray focus-ring">Your Care Team</a>
+        <a href="#included" class="px-3 py-2.5 rounded-lg text-sm font-semibold text-charcoal hover:bg-softgray focus-ring">What&rsquo;s Included</a>
+        <a href="contact.html" class="px-3 py-2.5 rounded-lg text-sm font-semibold text-charcoal hover:bg-softgray focus-ring">Contact</a>
+        <a href="contact.html#send-message" class="mt-2 text-center rounded-full bg-medblue text-white text-sm font-semibold px-6 py-3 shadow-elevated focus-ring">Request an Appointment</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="top" class="bg-softgray py-20 lg:py-28 text-center">
+  <div class="max-w-3xl mx-auto px-6 lg:px-8">
+    <p class="fade-up text-xs font-bold tracking-[0.16em] uppercase text-medblue">Where Your Health Comes Together</p>
+    <h1 class="fade-up fade-up-1 font-heading font-bold text-4xl sm:text-5xl text-navy tracking-[-0.02em] leading-[1.15] mt-4">
+      Primary care, whole-person medicine, and wellness &mdash; <em class="italic font-normal text-medblue">one team, one plan.</em>
+    </h1>
+    <div class="fade-up fade-up-2 w-16 h-0.5 bg-gold mx-auto my-7"></div>
+    <p class="fade-up fade-up-2 text-lg text-charcoal/70 italic">Built for your health, not just your symptoms.</p>
+    <a href="contact.html#send-message" class="fade-up fade-up-3 btn-press inline-flex items-center mt-8 rounded-full bg-navy text-white font-semibold px-8 py-3.5 shadow-elevated hover:bg-medblue focus-ring">
+      Request an Appointment
+    </a>
+
+    <div class="fade-up fade-up-3 flex flex-wrap justify-center gap-8 sm:gap-12 mt-14">
+      <div class="flex flex-col items-center gap-2">
+        <div class="w-14 h-14 rounded-full bg-white border border-navy/10 shadow-soft flex items-center justify-center">
+          <svg class="w-6 h-6 text-navy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-11.8 7.8L3 21l1.7-6.2A8.5 8.5 0 1 1 21 11.5Z"/></svg>
+        </div>
+        <span class="text-xs font-semibold text-charcoal/60">Physician</span>
+      </div>
+      <div class="flex flex-col items-center gap-2">
+        <div class="w-14 h-14 rounded-full bg-white border border-navy/10 shadow-soft flex items-center justify-center">
+          <svg class="w-6 h-6 text-medblue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <span class="text-xs font-semibold text-charcoal/60">Care Coordinator</span>
+      </div>
+      <div class="flex flex-col items-center gap-2">
+        <div class="w-14 h-14 rounded-full bg-white border border-navy/10 shadow-soft flex items-center justify-center">
+          <svg class="w-6 h-6 text-heartred" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/></svg>
+        </div>
+        <span class="text-xs font-semibold text-charcoal/60">Dietitian</span>
+      </div>
+      <div class="flex flex-col items-center gap-2">
+        <div class="w-14 h-14 rounded-full bg-white border border-navy/10 shadow-soft flex items-center justify-center">
+          <svg class="w-6 h-6 text-navy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 3a3.5 3.5 0 0 0-3.5 3.5v.6A3 3 0 0 0 4 9.9v1.2a3 3 0 0 0 1.3 2.5A3.5 3.5 0 0 0 9 18h1V3.4A3.4 3.4 0 0 0 9.5 3Z"/><path d="M14.5 3A3.5 3.5 0 0 1 18 6.5v.6A3 3 0 0 1 20 9.9v1.2a3 3 0 0 1-1.3 2.5A3.5 3.5 0 0 1 15 18h-1V3.4A3.4 3.4 0 0 1 14.5 3Z"/></svg>
+        </div>
+        <span class="text-xs font-semibold text-charcoal/60">Nurse Practitioner</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OUR APPROACH (team roles) ============ -->
+<section id="team" class="bg-navy text-white py-20 lg:py-24">
+  <div class="max-w-3xl mx-auto px-6 lg:px-8 text-center">
+    <span class="text-xs font-bold tracking-[0.16em] uppercase text-gold">Our Approach</span>
+    <h2 class="font-heading font-bold text-3xl sm:text-4xl tracking-[-0.02em] mt-3">It&rsquo;s Time to Feel Well, Cared For.</h2>
+    <p class="mt-5 text-white/75 leading-[1.75]">Healthcare shouldn&rsquo;t be fragmented and transactional. At KampieDa, your dedicated care team collaborates on every decision &mdash; blending preventive primary care, whole-person medicine, and behavioral wellness into a single, coordinated plan.</p>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="bg-white/5 border border-white/10 rounded-2xl p-7 text-center">
+      <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center mx-auto">
+        <svg class="w-6 h-6 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-11.8 7.8L3 21l1.7-6.2A8.5 8.5 0 1 1 21 11.5Z"/></svg>
+      </div>
+      <h3 class="font-heading font-bold text-lg mt-4">Primary Care Physician</h3>
+      <p class="mt-2 text-sm text-white/70 leading-[1.7]">Your clinical strategy, led by an expert. A board-certified physician takes a proactive, whole-body approach to prevention and care.</p>
+    </div>
+    <div class="bg-white/5 border border-white/10 rounded-2xl p-7 text-center">
+      <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center mx-auto">
+        <svg class="w-6 h-6 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      </div>
+      <h3 class="font-heading font-bold text-lg mt-4">Care Coordinator</h3>
+      <p class="mt-2 text-sm text-white/70 leading-[1.7]">Every detail, coordinated. Your Care Coordinator manages scheduling, referrals, and logistics, so your experience feels seamless.</p>
+    </div>
+    <div class="bg-white/5 border border-white/10 rounded-2xl p-7 text-center">
+      <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center mx-auto">
+        <svg class="w-6 h-6 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/></svg>
+      </div>
+      <h3 class="font-heading font-bold text-lg mt-4">Registered Dietitian</h3>
+      <p class="mt-2 text-sm text-white/70 leading-[1.7]">Nutrition, made clinical. Your dietitian translates labs, lifestyle, and health goals into a personalized strategy you can use.</p>
+    </div>
+    <div class="bg-white/5 border border-white/10 rounded-2xl p-7 text-center">
+      <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center mx-auto">
+        <svg class="w-6 h-6 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 3a3.5 3.5 0 0 0-3.5 3.5v.6A3 3 0 0 0 4 9.9v1.2a3 3 0 0 0 1.3 2.5A3.5 3.5 0 0 0 9 18h1V3.4A3.4 3.4 0 0 0 9.5 3Z"/><path d="M14.5 3A3.5 3.5 0 0 1 18 6.5v.6A3 3 0 0 1 20 9.9v1.2a3 3 0 0 1-1.3 2.5A3.5 3.5 0 0 1 15 18h-1V3.4A3.4 3.4 0 0 1 14.5 3Z"/></svg>
+      </div>
+      <h3 class="font-heading font-bold text-lg mt-4">Nurse Practitioner</h3>
+      <p class="mt-2 text-sm text-white/70 leading-[1.7]">Acute sick care, handled. When something comes up, your Nurse Practitioner steps in quickly, with full knowledge of your history.</p>
+    </div>
+  </div>
+
+  <div class="text-center mt-12">
+    <a href="index.html#providers" class="btn-press inline-flex items-center rounded-full border border-white/30 text-white text-sm font-semibold px-7 py-3 hover:bg-white/10 focus-ring">Meet the Team</a>
+  </div>
+</section>
+
+<!-- ============ HEALTH FOCUS AREAS ============ -->
+<section class="bg-white py-20 lg:py-28">
+  <div class="max-w-3xl mx-auto px-6 lg:px-8 text-center">
+    <span class="text-xs font-bold tracking-[0.16em] uppercase text-medblue">The KampieDa Approach</span>
+    <h2 class="font-heading font-bold text-3xl sm:text-4xl text-navy tracking-[-0.02em] mt-3">We Look at the Whole Picture, So You Can Live Well.</h2>
+    <p class="mt-4 text-charcoal/70 leading-[1.75]">Comprehensive primary care covers far more than sick visits. Here&rsquo;s where we focus.</p>
+  </div>
+
+  <div class="max-w-5xl mx-auto px-6 lg:px-8 mt-14 grid grid-cols-2 md:grid-cols-3 gap-px bg-navy/10 rounded-2xl overflow-hidden border border-navy/10">
+    <div class="bg-white p-8 text-center">
+      <svg class="w-8 h-8 text-medblue mx-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c-4.4-3-8-6.6-8-11a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 4.4-3.6 8-8 11Z"/></svg>
+      <p class="font-heading font-bold text-navy mt-4">Women&rsquo;s Health</p>
+    </div>
+    <div class="bg-white p-8 text-center">
+      <svg class="w-8 h-8 text-navy mx-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 6.5 3 3m0 0v4m0-4h4M17.5 6.5 21 3m0 0v4m0-4h-4M6.5 17.5 3 21m0 0v-4m0 4h4M17.5 17.5 21 21m0 0v-4m0 4h-4"/><circle cx="12" cy="12" r="4"/></svg>
+      <p class="font-heading font-bold text-navy mt-4">Men&rsquo;s Health</p>
+    </div>
+    <div class="bg-white p-8 text-center">
+      <svg class="w-8 h-8 text-heartred mx-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+      <p class="font-heading font-bold text-navy mt-4">Cardiovascular Health</p>
+    </div>
+    <div class="bg-white p-8 text-center">
+      <svg class="w-8 h-8 text-medblue mx-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+      <p class="font-heading font-bold text-navy mt-4">Chronic Disease Management</p>
+    </div>
+    <div class="bg-white p-8 text-center">
+      <svg class="w-8 h-8 text-navy mx-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11.5 11 13.5 15.5 9"/><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18"/></svg>
+      <p class="font-heading font-bold text-navy mt-4">Preventive Screenings</p>
+    </div>
+    <div class="bg-white p-8 text-center">
+      <svg class="w-8 h-8 text-heartred mx-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/><circle cx="12" cy="12" r="3"/></svg>
+      <p class="font-heading font-bold text-navy mt-4">Immunizations</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES BREAKDOWN ============ -->
+<section class="bg-softgray py-20 lg:py-28">
+  <div class="max-w-3xl mx-auto px-6 lg:px-8 text-center">
+    <span class="text-xs font-bold tracking-[0.16em] uppercase text-medblue">Not One More Thing. Everything.</span>
+    <h2 class="font-heading font-bold text-3xl sm:text-4xl text-navy tracking-[-0.02em] mt-3">The Most Efficient Way to Experience Healthcare.</h2>
+    <p class="mt-4 text-charcoal/70 leading-[1.75]">We coordinate your care. You live your life.</p>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-6 lg:px-8 mt-12 space-y-6">
+    <div class="bg-white rounded-2xl shadow-soft p-8">
+      <h3 class="font-heading font-bold text-xl text-navy flex items-center gap-2"><span class="text-gold text-2xl leading-none">+</span>Primary Care</h3>
+      <p class="mt-3 text-charcoal/70 leading-[1.75]">Ongoing, integrative care led by clinicians who see the full picture &mdash; from sick visits and screenings to prescriptions, chronic condition management, and specialist coordination.</p>
+      <div class="flex flex-wrap gap-2 mt-5">
+        <span class="text-xs font-bold tracking-wide text-navy border border-navy/20 rounded-full px-3 py-1.5">SICK VISITS</span>
+        <span class="text-xs font-bold tracking-wide text-navy border border-navy/20 rounded-full px-3 py-1.5">CHRONIC DISEASE</span>
+        <span class="text-xs font-bold tracking-wide text-navy border border-navy/20 rounded-full px-3 py-1.5">LAB TESTING</span>
+        <span class="text-xs font-bold tracking-wide text-navy border border-navy/20 rounded-full px-3 py-1.5">SPECIALIST REFERRALS</span>
+      </div>
+    </div>
+    <div class="bg-white rounded-2xl shadow-soft p-8">
+      <h3 class="font-heading font-bold text-xl text-navy flex items-center gap-2"><span class="text-gold text-2xl leading-none">+</span>Preventive Wellness</h3>
+      <p class="mt-3 text-charcoal/70 leading-[1.75]">Annual physicals, immunizations, and proactive bloodwork that catch small issues before they become big ones &mdash; built around your health history.</p>
+      <div class="flex flex-wrap gap-2 mt-5">
+        <span class="text-xs font-bold tracking-wide text-navy border border-navy/20 rounded-full px-3 py-1.5">ANNUAL PHYSICAL</span>
+        <span class="text-xs font-bold tracking-wide text-navy border border-navy/20 rounded-full px-3 py-1.5">IMMUNIZATIONS</span>
+        <span class="text-xs font-bold tracking-wide text-navy border border-navy/20 rounded-full px-3 py-1.5">BLOODWORK</span>
+        <span class="text-xs font-bold tracking-wide text-navy border border-navy/20 rounded-full px-3 py-1.5">HEALTH SCREENINGS</span>
+      </div>
+    </div>
+    <div class="bg-white rounded-2xl shadow-soft p-8">
+      <h3 class="font-heading font-bold text-xl text-navy flex items-center gap-2"><span class="text-gold text-2xl leading-none">+</span>Care Coordination</h3>
+      <p class="mt-3 text-charcoal/70 leading-[1.75]">Personalized support that turns your care plan into action &mdash; through prescription management, referral coordination, and follow-up scheduling.</p>
+      <div class="flex flex-wrap gap-2 mt-5">
+        <span class="text-xs font-bold tracking-wide text-navy border border-navy/20 rounded-full px-3 py-1.5">PRESCRIPTION MANAGEMENT</span>
+        <span class="text-xs font-bold tracking-wide text-navy border border-navy/20 rounded-full px-3 py-1.5">REFERRAL COORDINATION</span>
+        <span class="text-xs font-bold tracking-wide text-navy border border-navy/20 rounded-full px-3 py-1.5">TELEHEALTH FOLLOW-UPS</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center mt-10">
+    <a href="contact.html#send-message" class="btn-press inline-flex items-center rounded-full bg-navy text-white text-sm font-semibold px-7 py-3 hover:bg-medblue focus-ring shadow-elevated">Request an Appointment</a>
+  </div>
+</section>
+
+<!-- ============ WHAT'S INCLUDED ============ -->
+<section id="included" class="bg-navy text-white py-20 lg:py-24">
+  <div class="max-w-3xl mx-auto px-6 lg:px-8">
+    <span class="text-xs font-bold tracking-[0.16em] uppercase text-gold">What to Expect</span>
+    <h2 class="font-heading font-bold text-3xl sm:text-4xl tracking-[-0.02em] mt-3">What Your Visit Includes</h2>
+
+    <ul class="mt-9 space-y-4 border-t border-white/15 pt-8">
+      <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0"></span><span class="text-white/85">Sick and well visits &mdash; in-office and via telehealth</span></li>
+      <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0"></span><span class="text-white/85">Annual physical exam</span></li>
+      <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0"></span><span class="text-white/85">Chronic condition management</span></li>
+      <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0"></span><span class="text-white/85">Preventive screenings &amp; bloodwork</span></li>
+      <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0"></span><span class="text-white/85">Personalized care plan</span></li>
+      <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0"></span><span class="text-white/85">Prescription management</span></li>
+      <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0"></span><span class="text-white/85">Specialist referrals &amp; coordination</span></li>
+      <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0"></span><span class="text-white/85">Secure patient portal messaging</span></li>
+    </ul>
+
+    <div class="mt-10 pt-8 border-t border-white/15">
+      <p class="text-white/75 leading-[1.75]"><strong class="text-white">Most major insurance accepted,</strong> including Medicaid and Medicare. If you don&rsquo;t currently have insurance, our team can help you explore your options.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHAT TO EXPECT STEPS + PHOTOS ============ -->
+<section class="bg-gold/10 py-20 lg:py-24">
+  <div class="max-w-3xl mx-auto px-6 lg:px-8 text-center">
+    <span class="text-xs font-bold tracking-[0.16em] uppercase text-medblue">Getting Started</span>
+    <h2 class="font-heading font-bold text-3xl sm:text-4xl text-navy tracking-[-0.02em] mt-3">Simple to Begin. Easy to Stay With.</h2>
+  </div>
+
+  <div class="max-w-5xl mx-auto px-6 lg:px-8 mt-14 grid sm:grid-cols-3 gap-8">
+    <div class="text-center">
+      <div class="w-16 h-16 rounded-full bg-white shadow-soft border border-gold/30 flex items-center justify-center mx-auto font-heading font-bold text-2xl text-navy">1</div>
+      <h3 class="font-heading font-bold text-navy text-lg mt-4">Schedule Your Visit</h3>
+      <p class="mt-2 text-sm text-charcoal/65 leading-[1.7]">Request an appointment online or by phone &mdash; in person or by telehealth.</p>
+    </div>
+    <div class="text-center">
+      <div class="w-16 h-16 rounded-full bg-white shadow-soft border border-gold/30 flex items-center justify-center mx-auto font-heading font-bold text-2xl text-navy">2</div>
+      <h3 class="font-heading font-bold text-navy text-lg mt-4">Meet Your Care Team</h3>
+      <p class="mt-2 text-sm text-charcoal/65 leading-[1.7]">Your physician gets the full picture of your health history and goals.</p>
+    </div>
+    <div class="text-center">
+      <div class="w-16 h-16 rounded-full bg-white shadow-soft border border-gold/30 flex items-center justify-center mx-auto font-heading font-bold text-2xl text-navy">3</div>
+      <h3 class="font-heading font-bold text-navy text-lg mt-4">Leave With a Plan</h3>
+      <p class="mt-2 text-sm text-charcoal/65 leading-[1.7]">A clear, personalized plan you understand and can act on right away.</p>
+    </div>
+  </div>
+
+  <div class="max-w-6xl mx-auto px-6 lg:px-8 mt-16 grid sm:grid-cols-3 gap-4">
+    <div class="img-tint rounded-2xl overflow-hidden shadow-elevated h-64">
+      <img src="https://images.pexels.com/photos/7789602/pexels-photo-7789602.jpeg?auto=compress&cs=tinysrgb&w=700" alt="A bright, clean exam room at KampieDa" class="w-full h-full object-cover" />
+    </div>
+    <div class="img-tint rounded-2xl overflow-hidden shadow-elevated h-64">
+      <img src="https://images.pexels.com/photos/7579831/pexels-photo-7579831.jpeg?auto=compress&cs=tinysrgb&w=700" alt="A physician consulting warmly with a patient" class="w-full h-full object-cover object-top" />
+    </div>
+    <div class="img-tint rounded-2xl overflow-hidden shadow-elevated h-64">
+      <img src="https://images.pexels.com/photos/8459996/pexels-photo-8459996.jpeg?auto=compress&cs=tinysrgb&w=700" alt="A bright, comfortable waiting area" class="w-full h-full object-cover" />
+    </div>
+  </div>
+</section>
+
+<!-- ============ LOCATION ============ -->
+<section class="bg-white py-20 lg:py-28">
+  <div class="max-w-3xl mx-auto px-6 lg:px-8 text-center">
+    <span class="text-xs font-bold tracking-[0.16em] uppercase text-medblue">Our Place</span>
+    <h2 class="font-heading font-bold text-3xl sm:text-4xl text-navy tracking-[-0.02em] mt-3">Here &mdash; Or Wherever You Are.</h2>
+    <p class="mt-4 text-charcoal/70 leading-[1.75]">In person and via telehealth, seven days a week.</p>
+  </div>
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 mt-12">
+    <div class="rounded-2xl overflow-hidden shadow-elevated border border-navy/5">
+      <iframe
+        src="https://www.google.com/maps?q=8300+Boone+Blvd+Ste+573,+Vienna,+VA+22182&output=embed"
+        width="100%"
+        height="380"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Map showing KampieDa Medical Group & Behavioral Health at 8300 Boone Blvd, Ste #573, Vienna, VA 22182">
+      </iframe>
+    </div>
+    <p class="text-center text-charcoal/70 mt-6">8300 Boone Blvd, Ste #573, Vienna, VA 22182 &nbsp;&bull;&nbsp; <a href="tel:+15404462610" class="text-medblue font-semibold hover:text-navy transition-colors focus-ring">(540) 446-2610</a></p>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="bg-navy text-white">
+  <div class="max-w-3xl mx-auto px-6 lg:px-8 py-20 text-center">
+    <h2 class="font-heading font-bold text-3xl sm:text-4xl tracking-[-0.02em]">Your health is <em class="italic font-normal text-gold">our priority.</em></h2>
+    <a href="contact.html#send-message" class="btn-press inline-flex items-center mt-8 rounded-full border-2 border-gold text-gold font-bold px-8 py-3.5 hover:bg-gold hover:text-navy focus-ring">Request an Appointment</a>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-navy text-white/80 border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-12">
+
+      <div class="lg:col-span-1">
+        <img src="brand_assets/Logo.png" alt="KampieDa crest logo" class="h-16 w-16 object-contain" />
+        <p class="mt-4 text-xs font-semibold tracking-[0.14em] uppercase text-gold">Medical Group &amp; Behavioral Health</p>
+        <p class="mt-2 text-sm leading-[1.7] max-w-xs">Healing Minds. Strengthening Bodies. Restoring Lives.</p>
+      </div>
+
+      <div>
+        <h4 class="font-heading font-bold text-white text-sm tracking-wide">Get Care</h4>
+        <ul class="mt-5 space-y-3 text-sm">
+          <li><a href="index.html#services" class="hover:text-gold transition-colors focus-ring">Services</a></li>
+          <li><a href="index.html#providers" class="hover:text-gold transition-colors focus-ring">Providers</a></li>
+          <li><a href="index.html#portal" class="hover:text-gold transition-colors focus-ring">Patient Portal</a></li>
+          <li><a href="contact.html#send-message" class="hover:text-gold transition-colors focus-ring">Insurance Plans</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-heading font-bold text-white text-sm tracking-wide">Company</h4>
+        <ul class="mt-5 space-y-3 text-sm">
+          <li><a href="index.html#" class="hover:text-gold transition-colors focus-ring">About Us</a></li>
+          <li><a href="index.html#" class="hover:text-gold transition-colors focus-ring">Careers</a></li>
+          <li><a href="index.html#" class="hover:text-gold transition-colors focus-ring">Blog</a></li>
+          <li><a href="contact.html" class="hover:text-gold transition-colors focus-ring">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-heading font-bold text-white text-sm tracking-wide">Join Our Mailing List</h4>
+        <form class="mt-5 flex" onsubmit="return false;">
+          <input type="email" placeholder="Your email" aria-label="Email address" class="focus-ring w-full min-w-0 rounded-l-full bg-white/10 border border-white/20 px-4 py-2.5 text-sm text-white placeholder-white/50 focus:outline-none" />
+          <button type="submit" class="btn-press shrink-0 rounded-r-full bg-gold text-navy font-bold text-sm px-5 focus-ring">Join</button>
+        </form>
+        <div class="flex items-center gap-3 mt-6">
+          <a href="#" aria-label="Facebook" class="btn-press w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold hover:text-navy focus-ring">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14C17.17 2.1 15.9 2 14.6 2 11.9 2 10 3.66 10 6.7V9.5H7v4h3V22h4v-8.5Z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram" class="btn-press w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold hover:text-navy focus-ring">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+          </a>
+          <a href="#" aria-label="LinkedIn" class="btn-press w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold hover:text-navy focus-ring">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 5a2 2 0 1 1-4-.02 2 2 0 0 1 4 .02ZM3.2 8.75h3.5V21H3.2V8.75Zm6.2 0h3.35v1.68h.05c.47-.88 1.6-1.8 3.3-1.8 3.53 0 4.18 2.32 4.18 5.35V21h-3.5v-5.6c0-1.34-.02-3.06-1.87-3.06-1.87 0-2.16 1.46-2.16 2.96V21H9.4V8.75Z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/50">
+      <p>&copy; 2026 KampieDa Medical Group &amp; Behavioral Health, Corp. All rights reserved.</p>
+      <div class="flex items-center gap-6">
+        <a href="#" class="hover:text-gold transition-colors focus-ring">Privacy Statement</a>
+        <a href="#" class="hover:text-gold transition-colors focus-ring">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  btn.addEventListener('click', () => {
+    const isOpen = menu.style.maxHeight && menu.style.maxHeight !== '0px';
+    if (isOpen) {
+      menu.style.maxHeight = '0px';
+      menu.style.opacity = '0';
+      btn.setAttribute('aria-expanded', 'false');
+    } else {
+      menu.style.maxHeight = menu.scrollHeight + 'px';
+      menu.style.opacity = '1';
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+</script>
+
+</body>
+</html>

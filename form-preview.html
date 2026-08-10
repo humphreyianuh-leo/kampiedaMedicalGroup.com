@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>New Patient Form | KampieDa Medical Group & Behavioral Health, Corp.</title>
+<meta name="description" content="Preview, fill out, and print the KampieDa new patient registration form." />
+<link rel="icon" type="image/png" href="brand_assets/Logo.png" />
+<meta name="theme-color" content="#062A53" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          navy: '#062A53',
+          medblue: '#087DB8',
+          clinicalblue: '#0BA4DB',
+          gold: '#D6A33B',
+          heartred: '#B71924',
+          softgray: '#F4F7F9',
+          charcoal: '#172A3A',
+        },
+        fontFamily: {
+          heading: ['Merriweather', 'serif'],
+          body: ['Inter', 'sans-serif'],
+        },
+        boxShadow: {
+          soft: '0 1px 2px rgba(6,42,83,0.06), 0 4px 14px rgba(6,42,83,0.08)',
+          elevated: '0 4px 10px rgba(6,42,83,0.10), 0 14px 28px rgba(6,42,83,0.14)',
+          floating: '0 10px 20px rgba(6,42,83,0.14), 0 28px 56px rgba(6,42,83,0.18)',
+          goldglow: '0 6px 20px rgba(214,163,59,0.35)',
+        },
+      },
+    },
+  };
+</script>
+
+<style>
+  :root { --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1); --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1); }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; color: #172A3A; background-color: #ffffff; }
+  h1, h2, h3, .font-heading { font-family: 'Merriweather', serif; }
+
+  .btn-press { transition: transform 0.25s var(--ease-spring), box-shadow 0.35s var(--ease-smooth), background-color 0.3s var(--ease-smooth); }
+  .btn-press:hover { transform: translateY(-2px); }
+  .btn-press:active { transform: translateY(0px) scale(0.98); }
+  .focus-ring:focus-visible { outline: 2px solid #0BA4DB; outline-offset: 3px; border-radius: 4px; }
+  #mobile-menu { transition: max-height 0.4s var(--ease-smooth), opacity 0.3s var(--ease-smooth); }
+
+  .field { display: flex; flex-direction: column; gap: 3px; }
+  .field-label { font-size: 0.75rem; font-weight: 600; color: #172A3A99; }
+
+  .field-input, .field-textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 1.5px solid #062A5340;
+    background: transparent;
+    padding: 3px 2px;
+    font-size: 0.875rem;
+    font-family: 'Inter', sans-serif;
+    color: #172A3A;
+    outline: none;
+    transition: border-color 0.2s var(--ease-smooth), background-color 0.2s var(--ease-smooth);
+  }
+  .field-input:focus, .field-textarea:focus {
+    border-bottom-color: #087DB8;
+    background-color: #087DB80D;
+  }
+  .field-textarea { resize: vertical; min-height: 3.2rem; border: 1.5px solid #062A5340; border-radius: 6px; padding: 8px; }
+  .field-textarea:focus { border-color: #087DB8; }
+
+  .check-item { display: flex; align-items: center; gap: 0.4rem; font-size: 0.8rem; color: #172A3ACC; cursor: pointer; }
+  .check-item input[type="checkbox"] {
+    width: 0.95rem; height: 0.95rem; border-radius: 3px; accent-color: #062A53; cursor: pointer; flex-shrink: 0;
+  }
+
+  .initial-input {
+    width: 3rem; text-align: center; border: none; border-bottom: 1.5px solid #062A5340;
+    background: transparent; font-size: 0.875rem; padding: 2px; outline: none;
+  }
+  .initial-input:focus { border-bottom-color: #087DB8; background-color: #087DB80D; }
+
+  #print-logo { display: none; }
+
+  @media print {
+    header, #preview-toolbar, footer, .no-print { display: none !important; }
+    #print-logo { display: block !important; }
+    body { color: #000; }
+    .field-input, .field-textarea, .initial-input { border-color: #000 !important; color: #000; }
+    section { break-inside: avoid-page; }
+    .rounded-2xl { border-color: #999 !important; box-shadow: none !important; }
+    .bg-navy { background-color: #062A53 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+
+<body class="bg-white text-charcoal antialiased">
+
+<!-- Thin top utility bar -->
+<div class="bg-navy text-white/80 text-xs no-print">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 py-2 flex items-center justify-between">
+    <span class="hidden sm:inline tracking-wide">Healing Minds. Strengthening Bodies. Restoring Lives.</span>
+    <div class="flex items-center gap-5 ml-auto">
+      <a href="index.html#portal" class="hover:text-gold transition-colors focus-ring">Patient Portal</a>
+      <a href="tel:+15404462610" class="hover:text-gold transition-colors focus-ring">(540) 446-2610</a>
+    </div>
+  </div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-soft">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      <a href="index.html" class="flex items-center gap-3 focus-ring">
+        <img src="brand_assets/Logo.png" alt="KampieDa Medical Group & Behavioral Health, Corp. crest logo" class="h-14 w-14 object-contain" />
+        <span class="flex flex-col leading-tight">
+          <span class="font-heading font-bold text-navy text-xl tracking-tight">KampieDa</span>
+          <span class="text-[10px] font-semibold tracking-[0.14em] text-gold uppercase">Medical Group &amp; Behavioral Health</span>
+        </span>
+      </a>
+      <a href="index.html#info" class="text-sm font-semibold text-charcoal/80 hover:text-navy focus-ring">&larr; Back to Patient Info</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ TOOLBAR (sticky) ============ -->
+<div id="preview-toolbar" class="sticky top-20 z-40 bg-gold/15 border-y border-gold/30">
+  <div class="max-w-4xl mx-auto px-6 lg:px-8 py-4 flex flex-wrap items-center justify-between gap-4">
+    <div class="flex items-center gap-3">
+      <svg class="w-5 h-5 text-gold shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8Z"/><circle cx="12" cy="12" r="3"/></svg>
+      <p class="text-sm text-navy font-semibold">You can fill this out right here, then print it &mdash; nothing is saved or sent anywhere.</p>
+    </div>
+    <div class="flex flex-wrap items-center gap-3 shrink-0">
+      <button type="button" id="clear-form-btn" class="btn-press inline-flex items-center gap-2 rounded-full border-2 border-navy/20 text-navy text-sm font-semibold px-5 py-2.5 hover:bg-navy hover:text-white focus-ring">
+        Clear Form
+      </button>
+      <button type="button" id="print-btn" class="btn-press inline-flex items-center gap-2 rounded-full bg-navy text-white text-sm font-semibold px-6 py-2.5 shadow-elevated hover:bg-medblue focus-ring">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 14h12v8H6v-8Z"/></svg>
+        Print This Form
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ INTRO ============ -->
+<section class="bg-white pt-12 pb-6">
+  <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+    <img id="print-logo" src="brand_assets/Logo.png" alt="KampieDa crest logo" class="h-20 w-20 object-contain mx-auto mb-4" />
+    <span class="text-xs font-bold tracking-[0.16em] uppercase text-medblue">Patient Information</span>
+    <h1 class="font-heading font-bold text-3xl sm:text-4xl text-navy tracking-[-0.02em] mt-3">New Patient Registration Form</h1>
+    <p class="mt-4 text-charcoal/70 leading-[1.75] max-w-2xl mx-auto no-print">Fill out the form below directly on this page, then print it for your records or to bring to your visit &mdash; or download a blank copy to complete by hand.</p>
+  </div>
+</section>
+
+<!-- ============ FORM ============ -->
+<form id="patient-form" onsubmit="return false;">
+<section class="bg-white py-10">
+  <div class="max-w-4xl mx-auto px-6 lg:px-8 space-y-10">
+
+    <!-- Patient Information -->
+    <div class="border border-navy/10 rounded-2xl shadow-soft overflow-hidden">
+      <div class="bg-navy px-7 py-4">
+        <h2 class="font-heading font-bold text-white text-lg">Patient Information</h2>
+        <p class="text-white/60 text-xs mt-0.5">Please Print</p>
+      </div>
+      <div class="p-7 space-y-6">
+        <div class="grid sm:grid-cols-2 gap-6">
+          <div class="field sm:col-span-2"><label class="field-label" for="pt-name">Patient&rsquo;s Name</label><input id="pt-name" class="field-input" type="text" /></div>
+          <div class="flex gap-6 sm:col-span-2">
+            <label class="check-item"><input type="checkbox" name="sex" />Male</label>
+            <label class="check-item"><input type="checkbox" name="sex" />Female</label>
+          </div>
+          <div class="field sm:col-span-2"><label class="field-label" for="pt-address">Address</label><input id="pt-address" class="field-input" type="text" /></div>
+          <div class="field"><label class="field-label" for="pt-city">City/Town</label><input id="pt-city" class="field-input" type="text" /></div>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="field"><label class="field-label" for="pt-state">State</label><input id="pt-state" class="field-input" type="text" /></div>
+            <div class="field"><label class="field-label" for="pt-zip">Zip Code</label><input id="pt-zip" class="field-input" type="text" /></div>
+          </div>
+          <div class="field"><label class="field-label" for="pt-dob">Date of Birth</label><input id="pt-dob" class="field-input" type="date" /></div>
+          <div class="field"><label class="field-label" for="pt-ssn">Social Security Number</label><input id="pt-ssn" class="field-input" type="text" autocomplete="off" /></div>
+          <div class="field"><label class="field-label" for="pt-homephone">Home Phone</label><input id="pt-homephone" class="field-input" type="tel" /></div>
+          <div class="field"><label class="field-label" for="pt-cellphone">Cell Phone</label><input id="pt-cellphone" class="field-input" type="tel" /></div>
+          <div class="field"><label class="field-label" for="pt-email">Email</label><input id="pt-email" class="field-input" type="email" /></div>
+          <div class="field"><label class="field-label" for="pt-marital">Marital Status</label><input id="pt-marital" class="field-input" type="text" /></div>
+          <div class="field"><label class="field-label" for="pt-employer">Employer&rsquo;s Name</label><input id="pt-employer" class="field-input" type="text" /></div>
+          <div class="field"><label class="field-label" for="pt-employerphone">Employer&rsquo;s Phone</label><input id="pt-employerphone" class="field-input" type="tel" /></div>
+          <div class="field sm:col-span-2"><label class="field-label" for="pt-employeraddress">Employer&rsquo;s Address</label><input id="pt-employeraddress" class="field-input" type="text" /></div>
+          <div class="field sm:col-span-2"><label class="field-label" for="pt-mother">Mother&rsquo;s Name / DOB (if patient is under age 21)</label><input id="pt-mother" class="field-input" type="text" /></div>
+          <div class="field sm:col-span-2"><label class="field-label" for="pt-father">Father&rsquo;s Name / DOB (if patient is under age 21)</label><input id="pt-father" class="field-input" type="text" /></div>
+          <div class="field sm:col-span-2"><label class="field-label" for="pt-insurance1">Name of Primary Insurance</label><input id="pt-insurance1" class="field-input" type="text" /></div>
+          <div class="field sm:col-span-2"><label class="field-label" for="pt-insurance2">Name of Secondary Insurance</label><input id="pt-insurance2" class="field-input" type="text" /></div>
+        </div>
+
+        <div>
+          <p class="field-label mb-2">Relationship to Insured</p>
+          <div class="flex flex-wrap gap-5">
+            <label class="check-item"><input type="checkbox" name="relationship" />Self</label>
+            <label class="check-item"><input type="checkbox" name="relationship" />Spouse</label>
+            <label class="check-item"><input type="checkbox" name="relationship" />Child</label>
+            <label class="check-item"><input type="checkbox" name="relationship" />Other</label>
+          </div>
+        </div>
+
+        <div>
+          <p class="field-label mb-2">Race</p>
+          <div class="flex flex-wrap gap-x-5 gap-y-2">
+            <label class="check-item"><input type="checkbox" name="race" />White</label>
+            <label class="check-item"><input type="checkbox" name="race" />Black/African American</label>
+            <label class="check-item"><input type="checkbox" name="race" />Native Hawaiian/Other Pacific Islander</label>
+            <label class="check-item"><input type="checkbox" name="race" />American Indian/Alaska Native</label>
+            <label class="check-item"><input type="checkbox" name="race" />Asian</label>
+            <label class="check-item"><input type="checkbox" name="race" />Declined/Unknown</label>
+            <label class="check-item"><input type="checkbox" name="race" />Other</label>
+          </div>
+        </div>
+
+        <div>
+          <p class="field-label mb-2">Ethnicity</p>
+          <div class="flex flex-wrap gap-5">
+            <label class="check-item"><input type="checkbox" name="ethnicity" />Hispanic/Latino</label>
+            <label class="check-item"><input type="checkbox" name="ethnicity" />Not Hispanic/Latino</label>
+            <label class="check-item"><input type="checkbox" name="ethnicity" />Declined/Unknown</label>
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-6">
+          <div class="field"><label class="field-label" for="pt-language">Preferred Language</label><input id="pt-language" class="field-input" type="text" /></div>
+          <div class="field"><label class="field-label" for="pt-pharmacy">Preferred Pharmacy</label><input id="pt-pharmacy" class="field-input" type="text" /></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- General Medical History -->
+    <div class="border border-navy/10 rounded-2xl shadow-soft overflow-hidden">
+      <div class="bg-navy px-7 py-4">
+        <h2 class="font-heading font-bold text-white text-lg">General Medical History</h2>
+      </div>
+      <div class="p-7 space-y-6">
+        <div class="grid sm:grid-cols-2 gap-6">
+          <div class="field"><label class="field-label" for="mh-doctor">Primary Care Doctor</label><input id="mh-doctor" class="field-input" type="text" /></div>
+          <div class="field"><label class="field-label" for="mh-doctorphone">Phone Number</label><input id="mh-doctorphone" class="field-input" type="tel" /></div>
+        </div>
+
+        <div class="field"><label class="field-label" for="mh-meds">Medications You Are Currently Taking</label><textarea id="mh-meds" class="field-textarea" rows="3"></textarea></div>
+
+        <div class="grid sm:grid-cols-2 gap-6">
+          <div class="field"><label class="field-label" for="mh-drugallergy">Drug Allergies</label><input id="mh-drugallergy" class="field-input" type="text" /></div>
+          <div class="field"><label class="field-label" for="mh-foodallergy">Food Allergies</label><input id="mh-foodallergy" class="field-input" type="text" /></div>
+        </div>
+
+        <div class="flex flex-wrap gap-x-8 gap-y-2">
+          <span class="text-sm text-charcoal/70 flex items-center gap-2">Latex allergy? <label class="check-item"><input type="checkbox" name="latex" />Yes</label> <label class="check-item"><input type="checkbox" name="latex" />No</label></span>
+          <span class="text-sm text-charcoal/70 flex items-center gap-2">Wear glasses? <label class="check-item"><input type="checkbox" name="glasses" />Yes</label> <label class="check-item"><input type="checkbox" name="glasses" />No</label></span>
+          <span class="text-sm text-charcoal/70 flex items-center gap-2">Contacts? <label class="check-item"><input type="checkbox" name="contacts" />Yes</label> <label class="check-item"><input type="checkbox" name="contacts" />No</label></span>
+        </div>
+
+        <div>
+          <p class="field-label mb-2">Please Check If You Have Ever Had the Following</p>
+          <div class="grid sm:grid-cols-3 gap-x-4 gap-y-2">
+            <label class="check-item"><input type="checkbox" />AIDS</label>
+            <label class="check-item"><input type="checkbox" />Colitis</label>
+            <label class="check-item"><input type="checkbox" />Cancer &ndash; type</label>
+            <label class="check-item"><input type="checkbox" />Asthma</label>
+            <label class="check-item"><input type="checkbox" />Atrial Fibrillation</label>
+            <label class="check-item"><input type="checkbox" />Diabetes &ndash; type</label>
+            <label class="check-item"><input type="checkbox" />Sinusitis</label>
+            <label class="check-item"><input type="checkbox" />Congestive Heart Failure</label>
+            <label class="check-item"><input type="checkbox" />Coronary Artery Disease</label>
+            <label class="check-item"><input type="checkbox" />Crohn&rsquo;s Disease</label>
+            <label class="check-item"><input type="checkbox" />CVA/Stroke</label>
+            <label class="check-item"><input type="checkbox" />Arthritis</label>
+            <label class="check-item"><input type="checkbox" />Depression</label>
+            <label class="check-item"><input type="checkbox" />Glaucoma</label>
+            <label class="check-item"><input type="checkbox" />Hernia &ndash; type</label>
+            <label class="check-item"><input type="checkbox" />Anemia</label>
+            <label class="check-item"><input type="checkbox" />Hypercholesterolemia</label>
+            <label class="check-item"><input type="checkbox" />Thyroid Disease</label>
+            <label class="check-item"><input type="checkbox" />Hypertension</label>
+            <label class="check-item"><input type="checkbox" />Seizure Disorder</label>
+            <label class="check-item"><input type="checkbox" />Mental Illness</label>
+            <label class="check-item"><input type="checkbox" />TIA/Mini Stroke</label>
+            <label class="check-item"><input type="checkbox" />Diverticulitis</label>
+            <label class="check-item"><input type="checkbox" />Emphysema</label>
+            <label class="check-item"><input type="checkbox" />Anxiety</label>
+          </div>
+        </div>
+
+        <div class="field"><label class="field-label" for="mh-othermed">Please Identify Other Medical Issues</label><input id="mh-othermed" class="field-input" type="text" /></div>
+
+        <div>
+          <p class="field-label mb-2">Please Check Off If You Have Ever Had Any of These Surgeries</p>
+          <div class="grid sm:grid-cols-3 gap-x-4 gap-y-2">
+            <label class="check-item"><input type="checkbox" />Appendix</label>
+            <label class="check-item"><input type="checkbox" />Angioplasty</label>
+            <label class="check-item"><input type="checkbox" />PE / Ear Tubes</label>
+            <label class="check-item"><input type="checkbox" />Gallbladder</label>
+            <label class="check-item"><input type="checkbox" />C-Section</label>
+            <label class="check-item"><input type="checkbox" />Hernia</label>
+            <label class="check-item"><input type="checkbox" />Tonsils</label>
+            <label class="check-item"><input type="checkbox" />Splenectomy</label>
+            <label class="check-item"><input type="checkbox" />Gastric Bypass</label>
+            <label class="check-item"><input type="checkbox" />Mastectomy</label>
+            <label class="check-item"><input type="checkbox" />Pacemaker</label>
+            <label class="check-item"><input type="checkbox" />Other</label>
+          </div>
+        </div>
+
+        <div class="field"><label class="field-label" for="mh-hospitalizations">Recent Hospitalizations (with dates)</label><input id="mh-hospitalizations" class="field-input" type="text" /></div>
+
+        <div>
+          <p class="field-label mb-2">Family History (please list relationship)</p>
+          <div class="grid sm:grid-cols-3 gap-x-4 gap-y-2">
+            <label class="check-item"><input type="checkbox" />Unknown</label>
+            <label class="check-item"><input type="checkbox" />Adopted</label>
+            <label class="check-item"><input type="checkbox" />Addiction</label>
+            <label class="check-item"><input type="checkbox" />Cancer</label>
+            <label class="check-item"><input type="checkbox" />Diabetes</label>
+            <label class="check-item"><input type="checkbox" />Heart Disease</label>
+            <label class="check-item"><input type="checkbox" />Hypertension</label>
+            <label class="check-item"><input type="checkbox" />Mental Illness</label>
+            <label class="check-item"><input type="checkbox" />Stroke</label>
+            <label class="check-item"><input type="checkbox" />Other</label>
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-3 gap-6">
+          <div>
+            <p class="field-label mb-2">Smoking</p>
+            <div class="space-y-1.5">
+              <label class="check-item"><input type="checkbox" name="smoke" />Never</label>
+              <label class="check-item"><input type="checkbox" name="smoke" />Former</label>
+              <label class="check-item"><input type="checkbox" name="smoke" />&lt; 10/day</label>
+              <label class="check-item"><input type="checkbox" name="smoke" />&gt; 10/day</label>
+            </div>
+          </div>
+          <div>
+            <p class="field-label mb-2">Alcohol Use</p>
+            <div class="space-y-1.5">
+              <label class="check-item"><input type="checkbox" name="alcohol" />Denies</label>
+              <label class="check-item"><input type="checkbox" name="alcohol" />Occasionally</label>
+              <label class="check-item"><input type="checkbox" name="alcohol" />Heavily</label>
+            </div>
+          </div>
+          <div>
+            <p class="field-label mb-2">Drug Use</p>
+            <div class="space-y-1.5">
+              <label class="check-item"><input type="checkbox" name="drugs" />Denies Drugs</label>
+              <label class="check-item"><input type="checkbox" name="drugs" />Former User</label>
+              <label class="check-item"><input type="checkbox" name="drugs" />Current User</label>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <p class="field-label mb-2">Date of Last:</p>
+          <div class="grid sm:grid-cols-3 gap-x-4 gap-y-3">
+            <div class="field"><label class="field-label" for="d-colonoscopy">Colonoscopy</label><input id="d-colonoscopy" class="field-input" type="date" /></div>
+            <div class="field"><label class="field-label" for="d-mammogram">Mammogram</label><input id="d-mammogram" class="field-input" type="date" /></div>
+            <div class="field"><label class="field-label" for="d-bonedensity">Bone Density Test</label><input id="d-bonedensity" class="field-input" type="date" /></div>
+            <div class="field"><label class="field-label" for="d-stresstest">Stress Test</label><input id="d-stresstest" class="field-input" type="date" /></div>
+            <div class="field"><label class="field-label" for="d-sleepstudy">Sleep Study</label><input id="d-sleepstudy" class="field-input" type="date" /></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HIPAA Awareness -->
+    <div class="border border-navy/10 rounded-2xl shadow-soft overflow-hidden">
+      <div class="bg-navy px-7 py-4">
+        <h2 class="font-heading font-bold text-white text-lg">Patient HIPAA Awareness</h2>
+      </div>
+      <div class="p-7 space-y-5">
+        <p class="text-sm text-charcoal/70 leading-[1.75]">As a result of the Health Insurance Portability and Accountability Act (HIPAA), enforced by the U.S. Department of Health and Human Services Office for Civil Rights, we are not permitted to release patient information except as stated in our Notice of Privacy Practices, or in accordance with your wishes as stated below. This waiver authorizes KampieDa Medical Group &amp; Behavioral Health to send/give medical information as noted.</p>
+
+        <div class="space-y-5 text-sm text-charcoal/80">
+          <div>
+            <p>1. Leave a voicemail recording including my Personal Health Information on my home/cell phone.</p>
+            <div class="flex gap-5 mt-2 ml-4">
+              <label class="check-item"><input type="checkbox" name="hipaa1" />Yes</label>
+              <label class="check-item"><input type="checkbox" name="hipaa1" />No</label>
+            </div>
+          </div>
+          <div>
+            <p>2. Speak to an individual of my choosing (Personal Representative) regarding my Personal Health and Billing Information, and permit them to receive prescriptions and/or test results on my behalf.</p>
+            <div class="flex gap-5 mt-2 ml-4">
+              <label class="check-item"><input type="checkbox" name="hipaa2" />Yes</label>
+              <label class="check-item"><input type="checkbox" name="hipaa2" />No</label>
+            </div>
+            <div class="grid sm:grid-cols-3 gap-4 mt-3 ml-4">
+              <div class="field"><label class="field-label" for="rep-name">Name of Personal Representative</label><input id="rep-name" class="field-input" type="text" /></div>
+              <div class="field"><label class="field-label" for="rep-relationship">Relationship</label><input id="rep-relationship" class="field-input" type="text" /></div>
+              <div class="field"><label class="field-label" for="rep-phone">Phone Number</label><input id="rep-phone" class="field-input" type="tel" /></div>
+            </div>
+          </div>
+          <div>
+            <p>3. Speak to an individual in the event of a medical emergency.</p>
+            <div class="flex gap-5 mt-2 ml-4">
+              <label class="check-item"><input type="checkbox" name="hipaa3" />Yes</label>
+              <label class="check-item"><input type="checkbox" name="hipaa3" />No</label>
+            </div>
+            <div class="grid sm:grid-cols-3 gap-4 mt-3 ml-4">
+              <div class="field"><label class="field-label" for="emg-name">Name of Emergency Contact</label><input id="emg-name" class="field-input" type="text" /></div>
+              <div class="field"><label class="field-label" for="emg-relationship">Relationship</label><input id="emg-relationship" class="field-input" type="text" /></div>
+              <div class="field"><label class="field-label" for="emg-phone">Phone Number</label><input id="emg-phone" class="field-input" type="tel" /></div>
+            </div>
+          </div>
+          <div>
+            <p>4. Send an email notifying me to contact the office to discuss my lab/test results. We will not send Personal Health Information over the internet.</p>
+            <div class="flex gap-5 mt-2 ml-4">
+              <label class="check-item"><input type="checkbox" name="hipaa4" />Yes</label>
+              <label class="check-item"><input type="checkbox" name="hipaa4" />No</label>
+            </div>
+            <div class="mt-3 ml-4 max-w-sm"><div class="field"><label class="field-label" for="hipaa-email">Email Address</label><input id="hipaa-email" class="field-input" type="email" /></div></div>
+          </div>
+        </div>
+
+        <p class="text-sm text-charcoal/70 leading-[1.75]">By signing, you confirm you received/reviewed KampieDa Medical Group &amp; Behavioral Health&rsquo;s Notice of Privacy Practices, and that authorizations above remain in effect until you notify us in writing, by certified mail, of requested changes.</p>
+
+        <div class="grid sm:grid-cols-2 gap-6 pt-2">
+          <div class="field"><label class="field-label" for="hipaa-signature">Signature of Patient or Legal Guardian</label><input id="hipaa-signature" class="field-input" type="text" /></div>
+          <div class="field"><label class="field-label" for="hipaa-date">Today&rsquo;s Date</label><input id="hipaa-date" class="field-input" type="date" /></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Patient Responsibility Disclosure -->
+    <div class="border border-navy/10 rounded-2xl shadow-soft overflow-hidden">
+      <div class="bg-navy px-7 py-4">
+        <h2 class="font-heading font-bold text-white text-lg">Patient Responsibility Disclosure Statement</h2>
+      </div>
+      <div class="p-7 space-y-5">
+        <p class="text-sm text-charcoal/70 leading-[1.75]">Your signature forms a binding agreement between KampieDa Medical Group &amp; Behavioral Health and the patient (or Responsible Party, for minors under 18). All charges for services rendered are due and payable at the time of service. <strong class="text-navy">Please initial each item below.</strong></p>
+
+        <ul class="space-y-4 text-sm text-charcoal/80">
+          <li class="flex gap-3 items-start"><input type="text" maxlength="4" class="initial-input" aria-label="Initial" /><span>I am responsible and expected to pay for co-payments, unsatisfied deductibles, and any amount deemed my responsibility or non-covered by my insurance carrier.</span></li>
+          <li class="flex gap-3 items-start"><input type="text" maxlength="4" class="initial-input" aria-label="Initial" /><span>Co-pays are due at the time of service; additional co-pays required by insurance will be billed to me.</span></li>
+          <li class="flex gap-3 items-start"><input type="text" maxlength="4" class="initial-input" aria-label="Initial" /><span>Authorization to pay benefits directly to the physician; any insurance checks I receive must be signed over to KampieDa.</span></li>
+          <li class="flex gap-3 items-start"><input type="text" maxlength="4" class="initial-input" aria-label="Initial" /><span>KampieDa may use and disclose my PHI to bill and collect payment, including with business associates such as billing and claims companies.</span></li>
+          <li class="flex gap-3 items-start"><input type="text" maxlength="4" class="initial-input" aria-label="Initial" /><span>KampieDa is not a provider for No Fault or Workman&rsquo;s Compensation injuries, and such claims cannot be submitted for reimbursement.</span></li>
+          <li class="flex gap-3 items-start"><input type="text" maxlength="4" class="initial-input" aria-label="Initial" /><span>If charges go to collections, I agree to pay associated collection fees, attorney fees, court costs, and contingent fees up to 30%.</span></li>
+          <li class="flex gap-3 items-start"><input type="text" maxlength="4" class="initial-input" aria-label="Initial" /><span>KampieDa may transfer unpaid balances to outside collection entities, which may report to credit bureaus.</span></li>
+          <li class="flex gap-3 items-start"><input type="text" maxlength="4" class="initial-input" aria-label="Initial" /><span>KampieDa may terminate services based on noncompliance with this agreement. I am responsible for charges resulting from outdated or incorrect insurance information.</span></li>
+        </ul>
+
+        <div class="grid sm:grid-cols-2 gap-6 pt-2">
+          <div class="field"><label class="field-label" for="disc-name">Patient Name</label><input id="disc-name" class="field-input" type="text" /></div>
+          <div class="field"><label class="field-label" for="disc-date">Date</label><input id="disc-date" class="field-input" type="date" /></div>
+        </div>
+        <div class="field max-w-md"><label class="field-label" for="disc-signature">Signature of Patient/Guardian</label><input id="disc-signature" class="field-input" type="text" /></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+</form>
+
+<!-- ============ BOTTOM CTA ============ -->
+<section class="bg-softgray py-14 no-print">
+  <div class="max-w-3xl mx-auto px-6 lg:px-8 text-center">
+    <h2 class="font-heading font-bold text-2xl text-navy">Ready to Submit?</h2>
+    <p class="mt-3 text-charcoal/70">Once you&rsquo;ve filled out the form above, print it to bring to your visit &mdash; or download a blank copy if you&rsquo;d rather complete it by hand or in Word.</p>
+    <div class="flex flex-wrap justify-center gap-4 mt-6">
+      <button type="button" id="print-btn-bottom" class="btn-press inline-flex items-center gap-2 rounded-full bg-navy text-white font-semibold px-8 py-3.5 shadow-elevated hover:bg-medblue focus-ring">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 14h12v8H6v-8Z"/></svg>
+        Print This Form
+      </button>
+      <a href="forms/KampieDa-New-Patient-Registration-Form.docx" download="KampieDa-New-Patient-Registration-Form.docx" class="btn-press inline-flex items-center gap-2 rounded-full border-2 border-navy text-navy font-semibold px-8 py-3.5 hover:bg-navy hover:text-white focus-ring">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 19h16"/></svg>
+        Download Blank Form (.docx)
+      </a>
+    </div>
+    <p class="mt-4 text-xs text-charcoal/45">Questions before your visit? <a href="contact.html#send-message" class="text-medblue font-semibold hover:text-navy focus-ring">Contact us</a> or call <a href="tel:+15404462610" class="text-medblue font-semibold hover:text-navy focus-ring">(540) 446-2610</a>.</p>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-navy text-white/80 border-t border-white/10 no-print">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 py-10">
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/50">
+      <p>&copy; 2026 KampieDa Medical Group &amp; Behavioral Health, Corp. All rights reserved.</p>
+      <a href="index.html" class="hover:text-gold transition-colors focus-ring">Return to Homepage</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function printForm() { window.print(); }
+  document.getElementById('print-btn').addEventListener('click', printForm);
+  document.getElementById('print-btn-bottom').addEventListener('click', printForm);
+
+  document.getElementById('clear-form-btn').addEventListener('click', () => {
+    if (confirm('Clear all fields you’ve entered on this form?')) {
+      document.getElementById('patient-form').reset();
+    }
+  });
+</script>
+
+</body>
+</html>

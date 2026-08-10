@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Behavioral & Mental Health Support | KampieDa Medical Group & Behavioral Health, Corp.</title>
+<meta name="description" content="Specialized behavioral and mental health support for children, teens, and adults — individual, family, and group therapy, in person and via telehealth." />
+<link rel="icon" type="image/png" href="brand_assets/Logo.png" />
+<meta name="theme-color" content="#062A53" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          navy: '#062A53',
+          medblue: '#087DB8',
+          clinicalblue: '#0BA4DB',
+          gold: '#D6A33B',
+          heartred: '#B71924',
+          softgray: '#F4F7F9',
+          charcoal: '#172A3A',
+        },
+        fontFamily: {
+          heading: ['Merriweather', 'serif'],
+          body: ['Inter', 'sans-serif'],
+        },
+        boxShadow: {
+          soft: '0 1px 2px rgba(6,42,83,0.06), 0 4px 14px rgba(6,42,83,0.08)',
+          elevated: '0 4px 10px rgba(6,42,83,0.10), 0 14px 28px rgba(6,42,83,0.14)',
+          floating: '0 10px 20px rgba(6,42,83,0.14), 0 28px 56px rgba(6,42,83,0.18)',
+          goldglow: '0 6px 20px rgba(214,163,59,0.35)',
+        },
+      },
+    },
+  };
+</script>
+
+<style>
+  :root { --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1); --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1); }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; color: #172A3A; background-color: #ffffff; }
+  h1, h2, h3, .font-heading { font-family: 'Merriweather', serif; }
+
+  .img-tint { position: relative; }
+  .img-tint::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(6,42,83,0) 45%, rgba(6,42,83,0.5) 100%), rgba(8,125,184,0.14);
+    mix-blend-mode: multiply;
+  }
+
+  .btn-press { transition: transform 0.25s var(--ease-spring), box-shadow 0.35s var(--ease-smooth), background-color 0.3s var(--ease-smooth); }
+  .btn-press:hover { transform: translateY(-2px); }
+  .btn-press:active { transform: translateY(0px) scale(0.98); }
+
+  .row-hover { transition: background-color 0.3s var(--ease-smooth), padding-left 0.3s var(--ease-smooth); }
+  .row-hover:hover { background-color: rgba(8,125,184,0.06); padding-left: 0.5rem; }
+  .row-hover:hover .row-chevron { transform: translateX(4px); }
+  .row-chevron { transition: transform 0.3s var(--ease-spring); }
+
+  .focus-ring:focus-visible { outline: 2px solid #0BA4DB; outline-offset: 3px; border-radius: 4px; }
+
+  #mobile-menu { transition: max-height 0.4s var(--ease-smooth), opacity 0.3s var(--ease-smooth); }
+
+  @keyframes fade-up { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  .fade-up { animation: fade-up 0.7s var(--ease-smooth) both; }
+  .fade-up-1 { animation-delay: .05s; } .fade-up-2 { animation-delay: .15s; } .fade-up-3 { animation-delay: .25s; }
+
+  .hero-overlay {
+    background:
+      radial-gradient(60% 60% at 85% 10%, rgba(214,163,59,0.22) 0%, rgba(214,163,59,0) 60%),
+      linear-gradient(180deg, rgba(6,42,83,0.55) 0%, rgba(6,42,83,0.72) 55%, rgba(6,42,83,0.88) 100%);
+  }
+
+  .word-cloud span { transition: opacity 0.3s var(--ease-smooth), color 0.3s var(--ease-smooth); }
+  .word-cloud span:hover { opacity: 1 !important; color: #D6A33B; }
+
+  .concentric svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .card-lift { transition: transform 0.45s var(--ease-smooth), box-shadow 0.45s var(--ease-smooth); }
+  .card-lift:hover { transform: translateY(-6px); }
+</style>
+</head>
+
+<body class="bg-white text-charcoal antialiased">
+
+<!-- Thin top utility bar -->
+<div class="bg-navy text-white/80 text-xs">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 py-2 flex items-center justify-between">
+    <span class="hidden sm:inline tracking-wide">Healing Minds. Strengthening Bodies. Restoring Lives.</span>
+    <div class="flex items-center gap-5 ml-auto">
+      <a href="index.html#portal" class="hover:text-gold transition-colors focus-ring">Patient Portal</a>
+      <a href="tel:+15404462610" class="hover:text-gold transition-colors focus-ring">(540) 446-2610</a>
+    </div>
+  </div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-soft">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+
+      <a href="index.html" class="flex items-center gap-3 focus-ring">
+        <img src="brand_assets/Logo.png" alt="KampieDa Medical Group & Behavioral Health, Corp. crest logo" class="h-14 w-14 object-contain" />
+        <span class="flex flex-col leading-tight">
+          <span class="font-heading font-bold text-navy text-xl tracking-tight">KampieDa</span>
+          <span class="text-[10px] font-semibold tracking-[0.14em] text-gold uppercase">Medical Group &amp; Behavioral Health</span>
+        </span>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-8">
+        <a href="index.html#services" class="text-sm font-semibold text-charcoal/80 hover:text-navy focus-ring">Services</a>
+        <a href="#programs" class="text-sm font-semibold text-charcoal/80 hover:text-navy focus-ring">Programs</a>
+        <a href="#care-team" class="text-sm font-semibold text-charcoal/80 hover:text-navy focus-ring">Care Team</a>
+        <a href="#methods" class="text-sm font-semibold text-charcoal/80 hover:text-navy focus-ring">Our Methods</a>
+        <a href="contact.html" class="text-sm font-semibold text-charcoal/80 hover:text-navy focus-ring">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="contact.html#send-message" class="btn-press hidden sm:inline-flex items-center rounded-full bg-medblue text-white text-sm font-semibold px-6 py-2.5 shadow-elevated hover:bg-navy focus-ring">
+          Request an Appointment
+        </a>
+        <button id="menu-btn" aria-label="Toggle menu" aria-expanded="false" class="lg:hidden p-2 rounded-lg text-navy hover:bg-softgray focus-ring">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <nav id="mobile-menu" class="lg:hidden overflow-hidden max-h-0 opacity-0">
+      <div class="flex flex-col gap-1 pb-5 pt-1">
+        <a href="index.html#services" class="px-3 py-2.5 rounded-lg text-sm font-semibold text-charcoal hover:bg-softgray focus-ring">Services</a>
+        <a href="#programs" class="px-3 py-2.5 rounded-lg text-sm font-semibold text-charcoal hover:bg-softgray focus-ring">Programs</a>
+        <a href="#care-team" class="px-3 py-2.5 rounded-lg text-sm font-semibold text-charcoal hover:bg-softgray focus-ring">Care Team</a>
+        <a href="#methods" class="px-3 py-2.5 rounded-lg text-sm font-semibold text-charcoal hover:bg-softgray focus-ring">Our Methods</a>
+        <a href="contact.html" class="px-3 py-2.5 rounded-lg text-sm font-semibold text-charcoal hover:bg-softgray focus-ring">Contact</a>
+        <a href="contact.html#send-message" class="mt-2 text-center rounded-full bg-medblue text-white text-sm font-semibold px-6 py-3 shadow-elevated focus-ring">Request an Appointment</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="top" class="relative overflow-hidden">
+  <div class="img-tint absolute inset-0">
+    <img src="images/behavioral-health-wellness.png" alt="A person relaxing peacefully with a warm drink in soft morning light" class="w-full h-full object-cover" />
+  </div>
+  <div class="hero-overlay absolute inset-0"></div>
+  <div class="relative max-w-4xl mx-auto px-6 lg:px-8 py-28 lg:py-36 text-center">
+    <h1 class="fade-up font-heading font-bold text-4xl sm:text-5xl lg:text-6xl text-white tracking-[-0.02em] leading-[1.1]">
+      Behavioral &amp; Mental Health Support, <em class="italic font-normal text-gold">from home</em>
+    </h1>
+    <p class="fade-up fade-up-1 mt-6 text-lg text-white/85 leading-[1.75] max-w-2xl mx-auto">
+      Real care for real life. KampieDa provides specialized behavioral health support &mdash; including individual, family, and group counseling &mdash; tailored specifically for children, teens, and adults, in person or by telehealth.
+    </p>
+    <div class="fade-up fade-up-2 mt-9 flex flex-wrap justify-center items-center gap-4">
+      <a href="contact.html#send-message" class="btn-press inline-flex items-center rounded-full bg-gold text-navy font-bold px-7 py-3.5 shadow-goldglow hover:bg-[#e3b354] focus-ring">
+        Request an Appointment
+      </a>
+      <a href="tel:+15404462610" class="btn-press inline-flex items-center gap-2 rounded-full border border-white/30 text-white font-semibold px-7 py-3.5 hover:bg-white/10 focus-ring">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (540) 446-2610
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PURPOSE-BUILT PROGRAMS ============ -->
+<section id="programs" class="bg-softgray py-20 lg:py-28">
+  <div class="max-w-3xl mx-auto px-6 lg:px-8 text-center">
+    <span class="text-xs font-bold tracking-[0.16em] uppercase text-medblue">Why It Works</span>
+    <h2 class="font-heading font-bold text-3xl sm:text-4xl text-navy tracking-[-0.02em] mt-3">Purpose-Built Programs</h2>
+    <p class="mt-4 text-charcoal/70 leading-[1.75]">Our behavioral health support is designed to meet clients exactly where they are &mdash; developmentally, clinically, and personally.</p>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 mt-14 grid md:grid-cols-3 gap-8">
+
+    <div class="card-lift bg-white rounded-2xl overflow-hidden shadow-soft hover:shadow-floating">
+      <div class="img-tint h-48 overflow-hidden">
+        <img src="https://images.pexels.com/photos/7447262/pexels-photo-7447262.jpeg?auto=compress&cs=tinysrgb&w=800" alt="A therapist sharing a light moment with a child during a counseling session" class="w-full h-full object-cover object-top" />
+      </div>
+      <div class="p-7">
+        <p class="text-xs font-bold tracking-[0.1em] uppercase text-charcoal/50">Ages 8&ndash;17</p>
+        <h3 class="font-heading font-bold text-lg text-navy mt-2 flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gold"></span>Child &amp; Adolescent Support</h3>
+        <p class="mt-3 text-sm text-charcoal/70 leading-[1.7]">Helping young people name their emotions, build coping skills, and work through tough moments &mdash; with family involved every step of the way.</p>
+        <a href="contact.html#send-message" class="btn-press inline-flex items-center mt-5 rounded-full border border-navy/20 text-navy text-sm font-semibold px-5 py-2.5 hover:bg-navy hover:text-white focus-ring">Learn more</a>
+      </div>
+    </div>
+
+    <div class="card-lift bg-white rounded-2xl overflow-hidden shadow-soft hover:shadow-floating">
+      <div class="img-tint h-48 overflow-hidden">
+        <img src="https://images.pexels.com/photos/3958468/pexels-photo-3958468.jpeg?auto=compress&cs=tinysrgb&w=800" alt="An adult in a relaxed, supportive counseling conversation" class="w-full h-full object-cover object-[center_25%]" />
+      </div>
+      <div class="p-7">
+        <p class="text-xs font-bold tracking-[0.1em] uppercase text-charcoal/50">Ages 18+</p>
+        <h3 class="font-heading font-bold text-lg text-navy mt-2 flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gold"></span>Adult Counseling</h3>
+        <p class="mt-3 text-sm text-charcoal/70 leading-[1.7]">Individual therapy to help adults navigate stress, anxiety, and life transitions &mdash; with steady, judgment-free support.</p>
+        <a href="contact.html#send-message" class="btn-press inline-flex items-center mt-5 rounded-full border border-navy/20 text-navy text-sm font-semibold px-5 py-2.5 hover:bg-navy hover:text-white focus-ring">Learn more</a>
+      </div>
+    </div>
+
+    <div class="card-lift bg-white rounded-2xl overflow-hidden shadow-soft hover:shadow-floating">
+      <div class="img-tint h-48 overflow-hidden">
+        <img src="https://images.pexels.com/photos/7447261/pexels-photo-7447261.jpeg?auto=compress&cs=tinysrgb&w=800" alt="A family engaging in a supportive therapy session together" class="w-full h-full object-cover object-top" />
+      </div>
+      <div class="p-7">
+        <p class="text-xs font-bold tracking-[0.1em] uppercase text-charcoal/50">All Ages</p>
+        <h3 class="font-heading font-bold text-lg text-navy mt-2 flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gold"></span>Family &amp; Group Therapy</h3>
+        <p class="mt-3 text-sm text-charcoal/70 leading-[1.7]">Bringing families together to strengthen communication, rebuild trust, and heal as a unit &mdash; in a calm, structured space.</p>
+        <a href="contact.html#send-message" class="btn-press inline-flex items-center mt-5 rounded-full border border-navy/20 text-navy text-sm font-semibold px-5 py-2.5 hover:bg-navy hover:text-white focus-ring">Learn more</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ WHAT WE PROVIDE (word cloud band) ============ -->
+<section class="relative overflow-hidden bg-navy text-white py-20 lg:py-24">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+    <div>
+      <span class="text-xs font-bold tracking-[0.16em] uppercase text-gold">What We Provide</span>
+      <h2 class="font-heading font-bold text-3xl sm:text-4xl tracking-[-0.02em] mt-3 leading-[1.15]">Complete Care That Meets You Where You Are</h2>
+      <p class="mt-5 text-white/75 leading-[1.75] max-w-md">Whatever you&rsquo;re carrying, there&rsquo;s a path forward. We start by understanding your needs, then connect you with care built to support the full picture.</p>
+      <div class="flex flex-wrap gap-3 mt-8">
+        <a href="contact.html#send-message" class="btn-press inline-flex items-center rounded-full bg-gold text-navy font-bold px-6 py-3 shadow-goldglow hover:bg-[#e3b354] focus-ring">Request an Appointment</a>
+        <a href="tel:+15404462610" class="btn-press inline-flex items-center rounded-full border border-white/30 text-white font-semibold px-6 py-3 hover:bg-white/10 focus-ring">(540) 446-2610</a>
+      </div>
+    </div>
+    <div class="word-cloud grid grid-cols-2 gap-x-8 gap-y-5 font-heading text-lg sm:text-xl">
+      <span class="text-white/30 text-right">Grief &amp; Loss</span>
+      <span class="text-white/80">Anxiety</span>
+      <span class="text-white/50 text-right">Mood Instability</span>
+      <span class="text-white/70">Depression</span>
+      <span class="text-white/70 text-right">Relationship Issues</span>
+      <span class="text-white/40">Burnout</span>
+      <span class="text-gold text-right">Stress &amp;</span>
+      <span class="text-gold">Trauma</span>
+      <span class="text-white/50 text-right">Life Transitions</span>
+      <span class="text-white/60">Self-Esteem</span>
+      <span class="text-white/40 text-right">Sleep Difficulties</span>
+      <span class="text-white/30">Anger Management</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CARE TEAM ============ -->
+<section id="care-team" class="bg-white py-20 lg:py-28">
+  <div class="max-w-3xl mx-auto px-6 lg:px-8">
+    <span class="text-xs font-bold tracking-[0.16em] uppercase text-medblue">Your Care Team</span>
+    <h2 class="font-heading font-bold text-3xl sm:text-4xl text-navy tracking-[-0.02em] mt-3">Support That <em class="italic font-normal">Surrounds</em> You</h2>
+    <p class="mt-4 text-charcoal/70 leading-[1.75]">You&rsquo;re not expected to figure this out alone. Throughout your care, you&rsquo;re guided by a coordinated team of professionals who work together to support your progress and healing.</p>
+  </div>
+
+  <div class="max-w-md mx-auto px-6 lg:px-8 mt-12">
+    <div class="concentric relative rounded-[1.75rem] overflow-hidden shadow-floating h-[420px] sm:h-[480px] img-tint">
+      <img src="images/behavioral-health-wellness.png" alt="A person finding calm and peace at home" class="w-full h-full object-cover" />
+      <svg viewBox="0 0 500 480" fill="none" preserveAspectRatio="xMidYMid slice" class="opacity-70">
+        <circle cx="70" cy="480" r="100" stroke="white" stroke-width="1.5"/>
+        <circle cx="70" cy="480" r="190" stroke="white" stroke-width="1.5"/>
+        <circle cx="70" cy="480" r="280" stroke="white" stroke-width="1.5"/>
+        <circle cx="70" cy="480" r="370" stroke="white" stroke-width="1.5"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 mt-14 grid sm:grid-cols-3 gap-10">
+    <div class="text-center">
+      <div class="w-12 h-12 rounded-full bg-softgray border border-navy/10 flex items-center justify-center mx-auto">
+        <svg class="w-6 h-6 text-medblue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-11.8 7.8L3 21l1.7-6.2A8.5 8.5 0 1 1 21 11.5Z"/></svg>
+      </div>
+      <h3 class="font-heading font-bold text-navy text-lg mt-4">Therapists</h3>
+      <p class="mt-2 text-sm text-charcoal/65 leading-[1.7] max-w-xs mx-auto">Licensed clinicians who lead individual and family sessions &mdash; here to listen, guide, and help build a strong foundation for healing.</p>
+    </div>
+    <div class="text-center">
+      <div class="w-12 h-12 rounded-full bg-softgray border border-navy/10 flex items-center justify-center mx-auto">
+        <svg class="w-6 h-6 text-navy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 3a3.5 3.5 0 0 0-3.5 3.5v.6A3 3 0 0 0 4 9.9v1.2a3 3 0 0 0 1.3 2.5A3.5 3.5 0 0 0 9 18h1V3.4A3.4 3.4 0 0 0 9.5 3Z"/><path d="M14.5 3A3.5 3.5 0 0 1 18 6.5v.6A3 3 0 0 1 20 9.9v1.2a3 3 0 0 1-1.3 2.5A3.5 3.5 0 0 1 15 18h-1V3.4A3.4 3.4 0 0 1 14.5 3Z"/></svg>
+      </div>
+      <h3 class="font-heading font-bold text-navy text-lg mt-4">Psychiatric Team</h3>
+      <p class="mt-2 text-sm text-charcoal/65 leading-[1.7] max-w-xs mx-auto">Psychiatric providers with a family-centered approach to medication management and clinical wellness.</p>
+    </div>
+    <div class="text-center">
+      <div class="w-12 h-12 rounded-full bg-softgray border border-navy/10 flex items-center justify-center mx-auto">
+        <svg class="w-6 h-6 text-heartred" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      </div>
+      <h3 class="font-heading font-bold text-navy text-lg mt-4">Group Facilitators</h3>
+      <p class="mt-2 text-sm text-charcoal/65 leading-[1.7] max-w-xs mx-auto">Experienced facilitators who make group spaces feel safe and welcoming, so conversations stay relevant and meaningful.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MODALITIES ============ -->
+<section id="methods" class="bg-softgray py-20 lg:py-28">
+  <div class="max-w-3xl mx-auto px-6 lg:px-8 text-center">
+    <span class="text-xs font-bold tracking-[0.16em] uppercase text-medblue">Our Methods</span>
+    <h2 class="font-heading font-bold text-3xl sm:text-4xl text-navy tracking-[-0.02em] mt-3">Specialized in <em class="italic font-normal">Multiple</em> Approaches</h2>
+    <p class="mt-4 text-charcoal/70 leading-[1.75]">You&rsquo;ll build the strategies and skills you need for lasting stability &mdash; our clinicians draw from multiple methods and adapt them to you.</p>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <div class="bg-white rounded-2xl shadow-soft p-7">
+      <span class="inline-block text-xs font-bold tracking-wide bg-softgray text-navy px-3 py-1 rounded-full border border-navy/10">DBT</span>
+      <h3 class="font-heading font-bold text-navy text-lg mt-4">Dialectical Behavior Therapy</h3>
+      <p class="mt-2 text-sm text-charcoal/65 leading-[1.7]">Teaches mindfulness-based and action-oriented coping skills from the start.</p>
+    </div>
+    <div class="bg-white rounded-2xl shadow-soft p-7">
+      <span class="inline-block text-xs font-bold tracking-wide bg-softgray text-navy px-3 py-1 rounded-full border border-navy/10">CBT</span>
+      <h3 class="font-heading font-bold text-navy text-lg mt-4">Cognitive Behavioral Therapy</h3>
+      <p class="mt-2 text-sm text-charcoal/65 leading-[1.7]">Builds insight and coping skills through structured, logic-based practice.</p>
+    </div>
+    <div class="bg-white rounded-2xl shadow-soft p-7">
+      <span class="inline-block text-xs font-bold tracking-wide bg-softgray text-navy px-3 py-1 rounded-full border border-navy/10">CFT</span>
+      <h3 class="font-heading font-bold text-navy text-lg mt-4">Compassion-Focused Therapy</h3>
+      <p class="mt-2 text-sm text-charcoal/65 leading-[1.7]">Cultivates self-compassion to help reduce internalized shame.</p>
+    </div>
+    <div class="bg-white rounded-2xl shadow-soft p-7">
+      <span class="inline-block text-xs font-bold tracking-wide bg-softgray text-navy px-3 py-1 rounded-full border border-navy/10">MI</span>
+      <h3 class="font-heading font-bold text-navy text-lg mt-4">Motivational Interviewing</h3>
+      <p class="mt-2 text-sm text-charcoal/65 leading-[1.7]">Builds motivation for change through supportive, structured conversation.</p>
+    </div>
+    <div class="bg-white rounded-2xl shadow-soft p-7">
+      <span class="inline-block text-xs font-bold tracking-wide bg-softgray text-navy px-3 py-1 rounded-full border border-navy/10">TF-CBT</span>
+      <h3 class="font-heading font-bold text-navy text-lg mt-4">Trauma-Focused CBT</h3>
+      <p class="mt-2 text-sm text-charcoal/65 leading-[1.7]">Helps process and reframe difficult experiences to reduce distress.</p>
+    </div>
+    <div class="bg-white rounded-2xl shadow-soft p-7">
+      <span class="inline-block text-xs font-bold tracking-wide bg-softgray text-navy px-3 py-1 rounded-full border border-navy/10">FT</span>
+      <h3 class="font-heading font-bold text-navy text-lg mt-4">Family Therapy</h3>
+      <p class="mt-2 text-sm text-charcoal/65 leading-[1.7]">Strengthens communication and connection within the family system.</p>
+    </div>
+
+  </div>
+
+  <div class="text-center mt-10">
+    <a href="index.html#services" class="btn-press inline-flex items-center rounded-full border-2 border-navy text-navy text-sm font-semibold px-7 py-3 hover:bg-navy hover:text-white focus-ring">See All Services</a>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section id="appointment" class="relative overflow-hidden bg-navy text-white">
+  <div class="max-w-3xl mx-auto px-6 lg:px-8 py-20 text-center">
+    <h2 class="font-heading font-bold text-3xl sm:text-4xl tracking-[-0.02em]">We&rsquo;re Here When You Need Us</h2>
+    <p class="mt-4 text-white/75 leading-[1.75]">Request an appointment, or call us directly to find out what care is right for you. Our team is here to help.</p>
+    <div class="mt-9 flex flex-wrap justify-center gap-4">
+      <a href="contact.html#send-message" class="btn-press inline-flex items-center rounded-full bg-gold text-navy font-bold px-7 py-3.5 shadow-goldglow hover:bg-[#e3b354] focus-ring">Request an Appointment</a>
+      <a href="tel:+15404462610" class="btn-press inline-flex items-center rounded-full border border-white/30 text-white font-semibold px-7 py-3.5 hover:bg-white/10 focus-ring">(540) 446-2610</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer id="contact" class="bg-navy text-white/80">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-12">
+
+      <div class="lg:col-span-1">
+        <img src="brand_assets/Logo.png" alt="KampieDa crest logo" class="h-16 w-16 object-contain" />
+        <p class="mt-4 text-xs font-semibold tracking-[0.14em] uppercase text-gold">Medical Group &amp; Behavioral Health</p>
+        <p class="mt-2 text-sm leading-[1.7] max-w-xs">Healing Minds. Strengthening Bodies. Restoring Lives.</p>
+      </div>
+
+      <div>
+        <h4 class="font-heading font-bold text-white text-sm tracking-wide">Get Care</h4>
+        <ul class="mt-5 space-y-3 text-sm">
+          <li><a href="index.html#services" class="hover:text-gold transition-colors focus-ring">Services</a></li>
+          <li><a href="index.html#providers" class="hover:text-gold transition-colors focus-ring">Providers</a></li>
+          <li><a href="index.html#portal" class="hover:text-gold transition-colors focus-ring">Patient Portal</a></li>
+          <li><a href="contact.html#send-message" class="hover:text-gold transition-colors focus-ring">Insurance Plans</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-heading font-bold text-white text-sm tracking-wide">Company</h4>
+        <ul class="mt-5 space-y-3 text-sm">
+          <li><a href="index.html#" class="hover:text-gold transition-colors focus-ring">About Us</a></li>
+          <li><a href="index.html#" class="hover:text-gold transition-colors focus-ring">Careers</a></li>
+          <li><a href="index.html#" class="hover:text-gold transition-colors focus-ring">Blog</a></li>
+          <li><a href="contact.html" class="hover:text-gold transition-colors focus-ring">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-heading font-bold text-white text-sm tracking-wide">Join Our Mailing List</h4>
+        <form class="mt-5 flex" onsubmit="return false;">
+          <input type="email" placeholder="Your email" aria-label="Email address" class="focus-ring w-full min-w-0 rounded-l-full bg-white/10 border border-white/20 px-4 py-2.5 text-sm text-white placeholder-white/50 focus:outline-none" />
+          <button type="submit" class="btn-press shrink-0 rounded-r-full bg-gold text-navy font-bold text-sm px-5 focus-ring">Join</button>
+        </form>
+        <div class="flex items-center gap-3 mt-6">
+          <a href="#" aria-label="Facebook" class="btn-press w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold hover:text-navy focus-ring">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14C17.17 2.1 15.9 2 14.6 2 11.9 2 10 3.66 10 6.7V9.5H7v4h3V22h4v-8.5Z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram" class="btn-press w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold hover:text-navy focus-ring">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+          </a>
+          <a href="#" aria-label="LinkedIn" class="btn-press w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold hover:text-navy focus-ring">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 5a2 2 0 1 1-4-.02 2 2 0 0 1 4 .02ZM3.2 8.75h3.5V21H3.2V8.75Zm6.2 0h3.35v1.68h.05c.47-.88 1.6-1.8 3.3-1.8 3.53 0 4.18 2.32 4.18 5.35V21h-3.5v-5.6c0-1.34-.02-3.06-1.87-3.06-1.87 0-2.16 1.46-2.16 2.96V21H9.4V8.75Z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-14 pt-10 border-t border-white/10 grid sm:grid-cols-2 gap-8 max-w-2xl">
+      <div>
+        <p class="font-heading font-bold text-white text-sm">Main Office</p>
+        <p class="text-sm mt-2 leading-[1.8]">8300 Boone Blvd, Ste #573<br />Vienna, VA 22182<br /><a href="tel:+15404462610" class="hover:text-gold transition-colors focus-ring">(540) 446-2610</a><br />
+        <a href="https://wa.me/15404462610" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 mt-1 hover:text-gold transition-colors focus-ring">
+          <svg class="w-3.5 h-3.5 shrink-0" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.2-.1.2-.3.3-.5.1-.2 0-.4 0-.5C10 9 9.4 7.6 9.1 7c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.3-.6-.4Z"/><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.5A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.5-1.2l-.3-.2-3 .9.9-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></svg>
+          Text us on WhatsApp
+        </a></p>
+      </div>
+      <div>
+        <p class="font-heading font-bold text-white text-sm">Behavioral Health Center</p>
+        <p class="text-sm mt-2 leading-[1.8]">8300 Boone Blvd, Ste #573<br />Vienna, VA 22182<br /><a href="tel:+15404462610" class="hover:text-gold transition-colors focus-ring">(540) 446-2610</a><br />
+        <a href="https://wa.me/15404462610" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 mt-1 hover:text-gold transition-colors focus-ring">
+          <svg class="w-3.5 h-3.5 shrink-0" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.2-.1.2-.3.3-.5.1-.2 0-.4 0-.5C10 9 9.4 7.6 9.1 7c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.3-.6-.4Z"/><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.5A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.5-1.2l-.3-.2-3 .9.9-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></svg>
+          Text us on WhatsApp
+        </a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/50">
+      <p>&copy; 2026 KampieDa Medical Group &amp; Behavioral Health, Corp. All rights reserved.</p>
+      <div class="flex items-center gap-6">
+        <a href="#" class="hover:text-gold transition-colors focus-ring">Privacy Statement</a>
+        <a href="#" class="hover:text-gold transition-colors focus-ring">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  btn.addEventListener('click', () => {
+    const isOpen = menu.style.maxHeight && menu.style.maxHeight !== '0px';
+    if (isOpen) {
+      menu.style.maxHeight = '0px';
+      menu.style.opacity = '0';
+      btn.setAttribute('aria-expanded', 'false');
+    } else {
+      menu.style.maxHeight = menu.scrollHeight + 'px';
+      menu.style.opacity = '1';
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+</script>
+
+</body>
+</html>

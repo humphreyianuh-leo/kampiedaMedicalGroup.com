@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# Local tooling / session state
+.claude/
+temporary screenshots/
+
+# Design reference screenshots (other companies' sites, used only for layout inspiration — not for redistribution)
+institute.org_*.png
+www.charliehealth.com_*.png
+www.mmweightloss.com_*.png
+www.mrhsclinics.com_*.png
+www.psychiatrygreenwichvillage.com_*.png
+www.thelanby.com_*.png
+
+# Rejected/unused source screenshots
+Screenshot_8-8-2026*.jpeg
+Screenshot_2026-08-08*.jpeg
+
+# Duplicate of the working copy in forms/ (that one has the logo embedded and is what the site links to)
+KampieDa_Medical_Group_Behavioral_Health_Patient-Registration.docx
+
+# OS cruft
+Thumbs.db
+.DS_Store
