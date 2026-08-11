@@ -238,7 +238,7 @@
             Submit Message
             <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </button>
-          <p class="text-xs text-charcoal/50">Submitting will open your email app with this message addressed to <strong>info@kampiedaMedicalGroup.com</strong>.</p>
+          <p class="text-xs text-charcoal/50">Your message is sent directly to our team &mdash; nothing is stored on this site.</p>
         </form>
       </div>
     </div>
@@ -353,11 +353,14 @@
   }
   newCaptcha();
 
+  const CONTACT_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwwHp0L-mj84sJCotDh0jmc-45yowk2Ys6q8YiugfJvHD21UUQLnhuSCjsPRfFMKDBc/exec';
+
   const form = document.getElementById('contact-form');
   const captchaError = document.getElementById('captcha-error');
   const formStatus = document.getElementById('form-status');
+  const submitBtn = form.querySelector('button[type="submit"]');
 
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const firstName = document.getElementById('first-name').value.trim();
@@ -381,17 +384,41 @@
     }
 
     captchaError.classList.add('hidden');
-    formStatus.classList.add('hidden');
 
-    const subject = encodeURIComponent(`Website Contact Form — ${firstName} ${lastName}`);
-    const body = encodeURIComponent(
-      `Name: ${firstName} ${lastName}\nEmail: ${email}\n\nMessage:\n${message}`
-    );
-    window.location.href = `mailto:info@kampiedaMedicalGroup.com?subject=${subject}&body=${body}`;
-
-    formStatus.textContent = 'Opening your email app to send this message…';
+    submitBtn.disabled = true;
+    submitBtn.classList.add('opacity-60');
+    formStatus.textContent = 'Sending your message…';
     formStatus.className = 'text-sm font-medium text-medblue';
     formStatus.classList.remove('hidden');
+
+    try {
+      const payload = new FormData();
+      payload.append('firstName', firstName);
+      payload.append('lastName', lastName);
+      payload.append('email', email);
+      payload.append('message', message);
+
+      // Apps Script Web Apps don't return CORS headers, so the response is
+      // opaque with mode:'no-cors' — this still delivers the request; we just
+      // can't read the result back. A thrown error here means the request
+      // itself failed to send (network/DNS), not that Apps Script rejected it.
+      await fetch(CONTACT_ENDPOINT, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: payload,
+      });
+
+      formStatus.textContent = 'Thank you — your message has been sent. We’ll get back to you soon.';
+      formStatus.className = 'text-sm font-medium text-medblue';
+      form.reset();
+      newCaptcha();
+    } catch (err) {
+      formStatus.textContent = 'Something went wrong sending your message. Please call us at (540) 446-2610 instead.';
+      formStatus.className = 'text-sm font-medium text-heartred';
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.classList.remove('opacity-60');
+    }
   });
 </script>
 
