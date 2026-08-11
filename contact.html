@@ -297,10 +297,11 @@
 
       <div>
         <h4 class="font-heading font-bold text-white text-sm tracking-wide">Join Our Mailing List</h4>
-        <form class="mt-5 flex" onsubmit="return false;">
-          <input type="email" placeholder="Your email" aria-label="Email address" class="focus-ring w-full min-w-0 rounded-l-full bg-white/10 border border-white/20 px-4 py-2.5 text-sm text-white placeholder-white/50 focus:outline-none" />
+        <form id="mailing-list-form" class="mt-5 flex" onsubmit="return false;">
+          <input type="email" id="mailing-list-email" placeholder="Your email" aria-label="Email address" required class="focus-ring w-full min-w-0 rounded-l-full bg-white/10 border border-white/20 px-4 py-2.5 text-sm text-white placeholder-white/50 focus:outline-none" />
           <button type="submit" class="btn-press shrink-0 rounded-r-full bg-gold text-navy font-bold text-sm px-5 focus-ring">Join</button>
         </form>
+        <p id="mailing-list-status" class="hidden text-xs mt-2"></p>
         <div class="flex items-center gap-3 mt-6">
           <a href="#" aria-label="Facebook" class="btn-press w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold hover:text-navy focus-ring">
             <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14C17.17 2.1 15.9 2 14.6 2 11.9 2 10 3.66 10 6.7V9.5H7v4h3V22h4v-8.5Z"/></svg>
@@ -420,6 +421,36 @@
       submitBtn.classList.remove('opacity-60');
     }
   });
+
+  const MAILING_LIST_ENDPOINT = 'https://script.google.com/macros/s/AKfycbw3-FPgGDBoYfqR1z4y-Y2so9ZweSYtZaDCIsane20B-r7tz4jLPiWMPk8AJXFlp3L2/exec';
+  const mailingForm = document.getElementById('mailing-list-form');
+  if (mailingForm) {
+    const mailingEmail = document.getElementById('mailing-list-email');
+    const mailingStatus = document.getElementById('mailing-list-status');
+    mailingForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = mailingEmail.value.trim();
+      if (!email) return;
+      const mailingBtn = mailingForm.querySelector('button[type="submit"]');
+      mailingBtn.disabled = true;
+      mailingStatus.textContent = 'Joining…';
+      mailingStatus.className = 'text-xs mt-2 text-white/70';
+      mailingStatus.classList.remove('hidden');
+      try {
+        const payload2 = new FormData();
+        payload2.append('email', email);
+        await fetch(MAILING_LIST_ENDPOINT, { method: 'POST', mode: 'no-cors', body: payload2 });
+        mailingStatus.textContent = 'Thanks for joining our mailing list!';
+        mailingStatus.className = 'text-xs mt-2 text-gold';
+        mailingForm.reset();
+      } catch (err) {
+        mailingStatus.textContent = 'Something went wrong — please try again.';
+        mailingStatus.className = 'text-xs mt-2 text-heartred';
+      } finally {
+        mailingBtn.disabled = false;
+      }
+    });
+  }
 </script>
 
 </body>
