@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>KampieDa Flyer | KampieDa Medical Group & Behavioral Health, Corp.</title>
+<meta name="description" content="Printable flyer — KampieDa Medical Group & Behavioral Health, Corp. services, locations, and contact information." />
+<link rel="icon" type="image/png" href="brand_assets/Logo.png" />
+<meta name="theme-color" content="#062A53" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          navy: '#062A53',
+          medblue: '#087DB8',
+          clinicalblue: '#0BA4DB',
+          gold: '#D6A33B',
+          heartred: '#B71924',
+          softgray: '#F4F7F9',
+          charcoal: '#172A3A',
+        },
+        fontFamily: {
+          heading: ['Merriweather', 'serif'],
+          body: ['Inter', 'sans-serif'],
+        },
+        boxShadow: {
+          floating: '0 10px 20px rgba(6,42,83,0.14), 0 28px 56px rgba(6,42,83,0.18)',
+          goldglow: '0 6px 20px rgba(214,163,59,0.35)',
+        },
+      },
+    },
+  };
+</script>
+
+<style>
+  body { font-family: 'Inter', sans-serif; color: #172A3A; }
+  h1, h2, h3, .font-heading { font-family: 'Merriweather', serif; }
+
+  .btn-press { transition: transform .25s cubic-bezier(.34,1.56,.64,1), background-color .3s; }
+  .btn-press:hover { transform: translateY(-2px); }
+  .btn-press:active { transform: translateY(0) scale(.98); }
+  .focus-ring:focus-visible { outline: 2px solid #0BA4DB; outline-offset: 3px; border-radius: 4px; }
+  #mobile-menu { transition: max-height .4s cubic-bezier(.16,1,.3,1), opacity .3s; }
+
+  /* Flyer page: fixed US Letter proportions, on-screen shown as a "paper" card */
+  .flyer-page {
+    width: 8.5in;
+    min-height: 11in;
+    margin: 2rem auto;
+    background: #fff;
+    box-shadow: 0 10px 20px rgba(6,42,83,0.14), 0 28px 56px rgba(6,42,83,0.18);
+  }
+
+  @media print {
+    @page { size: letter; margin: 0; }
+    body { margin: 0; }
+    header, #toolbar, footer, .no-print { display: none !important; }
+    .flyer-page { box-shadow: none !important; margin: 0 !important; }
+  }
+
+  @media (max-width: 900px) {
+    .flyer-page { width: 100%; min-height: 0; }
+  }
+</style>
+</head>
+
+<body class="bg-softgray antialiased">
+
+<!-- Thin top utility bar -->
+<div class="bg-navy text-white/80 text-xs no-print">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 py-2 flex items-center justify-between">
+    <span class="hidden sm:inline tracking-wide">Healing Minds. Strengthening Bodies. Restoring Lives.</span>
+    <div class="flex items-center gap-5 ml-auto">
+      <a href="index.html#portal" class="hover:text-gold transition-colors focus-ring">Patient Portal</a>
+      <a href="tel:+15404462610" class="hover:text-gold transition-colors focus-ring">(540) 446-2610</a>
+    </div>
+  </div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-md no-print">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      <a href="index.html" class="flex items-center gap-3 focus-ring">
+        <img src="brand_assets/Logo.png" alt="KampieDa Medical Group & Behavioral Health, Corp. crest logo" class="h-14 w-14 object-contain" />
+        <span class="flex flex-col leading-tight">
+          <span class="font-heading font-bold text-navy text-xl tracking-tight">KampieDa</span>
+          <span class="text-[10px] font-semibold tracking-[0.14em] text-gold uppercase">Medical Group &amp; Behavioral Health</span>
+        </span>
+      </a>
+      <a href="index.html#info" class="text-sm font-semibold text-charcoal/80 hover:text-navy focus-ring">&larr; Back to Patient Info</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ TOOLBAR ============ -->
+<div id="toolbar" class="sticky top-20 z-40 bg-gold/15 border-y border-gold/30 no-print">
+  <div class="max-w-4xl mx-auto px-6 lg:px-8 py-4 flex flex-wrap items-center justify-between gap-4">
+    <div class="flex items-center gap-3">
+      <svg class="w-5 h-5 text-gold shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 14h12v8H6v-8Z"/></svg>
+      <p class="text-sm text-navy font-semibold">A printable, one-page flyer you can hand out to patients.</p>
+    </div>
+    <button type="button" id="print-btn" class="btn-press inline-flex items-center gap-2 rounded-full bg-navy text-white text-sm font-semibold px-6 py-2.5 shadow-md hover:bg-medblue focus-ring">
+      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 14h12v8H6v-8Z"/></svg>
+      Print Flyer
+    </button>
+  </div>
+</div>
+
+<!-- ============ FLYER PAGE ============ -->
+<div class="flyer-page">
+
+  <!-- Header band -->
+  <div class="bg-navy text-white text-center px-10 pt-10 pb-8">
+    <img src="brand_assets/Logo.png" alt="KampieDa crest logo" class="h-24 w-24 object-contain mx-auto" />
+    <h1 class="font-heading font-bold text-3xl tracking-[-0.02em] mt-3">KampieDa</h1>
+    <p class="text-xs font-bold tracking-[0.2em] text-gold uppercase mt-1">Medical Group &amp; Behavioral Health, Corp.</p>
+    <p class="italic text-white/80 mt-3">Healing Minds. Strengthening Bodies. Restoring Lives.</p>
+  </div>
+
+  <!-- Intro -->
+  <div class="text-center px-12 pt-7 pb-6">
+    <span class="text-xs font-bold tracking-[0.16em] uppercase text-medblue">Whole-Person Care</span>
+    <h2 class="font-heading font-bold text-2xl text-navy tracking-[-0.02em] mt-2">Compassionate Care for Mind &amp; Body</h2>
+    <p class="text-sm text-charcoal/70 leading-[1.7] mt-3 max-w-xl mx-auto">Your health deserves care that considers the whole person. Our medical and behavioral health providers work together to support better physical and emotional wellness &mdash; in person and by telehealth.</p>
+  </div>
+
+  <!-- Services -->
+  <div class="px-10 py-2">
+    <div class="grid grid-cols-5 gap-3 border-t border-b border-navy/10 py-6">
+
+      <div class="text-center">
+        <div class="w-11 h-11 rounded-full bg-softgray border border-navy/10 flex items-center justify-center mx-auto">
+          <svg class="w-5 h-5 text-navy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M12 3v6m0 0v6m0-6h6m-6 0H6"/><rect x="4" y="3" width="16" height="18" rx="2"/></svg>
+        </div>
+        <p class="font-heading font-bold text-navy text-xs mt-2 leading-tight">Primary<br />Care</p>
+      </div>
+
+      <div class="text-center">
+        <div class="w-11 h-11 rounded-full bg-softgray border border-navy/10 flex items-center justify-center mx-auto">
+          <svg class="w-5 h-5 text-medblue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M9.5 3a3.5 3.5 0 0 0-3.5 3.5v.6A3 3 0 0 0 4 9.9v1.2a3 3 0 0 0 1.3 2.5A3.5 3.5 0 0 0 9 18h1V3.4A3.4 3.4 0 0 0 9.5 3Z"/><path d="M14.5 3A3.5 3.5 0 0 1 18 6.5v.6A3 3 0 0 1 20 9.9v1.2a3 3 0 0 1-1.3 2.5A3.5 3.5 0 0 1 15 18h-1V3.4A3.4 3.4 0 0 1 14.5 3Z"/></svg>
+        </div>
+        <p class="font-heading font-bold text-navy text-xs mt-2 leading-tight">Psychiatry</p>
+      </div>
+
+      <div class="text-center">
+        <div class="w-11 h-11 rounded-full bg-softgray border border-navy/10 flex items-center justify-center mx-auto">
+          <svg class="w-5 h-5 text-heartred" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/></svg>
+        </div>
+        <p class="font-heading font-bold text-navy text-xs mt-2 leading-tight">Behavioral<br />Health</p>
+      </div>
+
+      <div class="text-center">
+        <div class="w-11 h-11 rounded-full bg-softgray border border-navy/10 flex items-center justify-center mx-auto">
+          <svg class="w-5 h-5 text-navy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <p class="font-heading font-bold text-navy text-xs mt-2 leading-tight">Telehealth</p>
+      </div>
+
+      <div class="text-center">
+        <div class="w-11 h-11 rounded-full bg-softgray border border-navy/10 flex items-center justify-center mx-auto">
+          <svg class="w-5 h-5 text-medblue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M9 12h6M12 9v6"/></svg>
+        </div>
+        <p class="font-heading font-bold text-navy text-xs mt-2 leading-tight">Weight<br />Loss</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Where we serve + Insurance -->
+  <div class="px-10 py-6 grid grid-cols-2 gap-8">
+    <div>
+      <h3 class="font-heading font-bold text-navy text-sm uppercase tracking-wide">Where We Serve</h3>
+      <ul class="mt-3 space-y-2 text-sm text-charcoal/75">
+        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gold shrink-0"></span>Virginia &amp; Maryland &mdash; in-person &amp; telehealth</li>
+        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gold shrink-0"></span>Washington, D.C. &amp; New York &mdash; telehealth only</li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="font-heading font-bold text-navy text-sm uppercase tracking-wide">Insurance We Accept</h3>
+      <p class="mt-3 text-sm text-charcoal/75">Aetna &middot; Cigna &middot; TRICARE &middot; Medicaid &middot; Medicare</p>
+      <p class="text-xs text-charcoal/50 mt-1">Ask us about coverage verification &amp; billing support.</p>
+    </div>
+  </div>
+
+  <!-- CTA / Contact band -->
+  <div class="bg-navy text-white px-10 py-8 mt-2">
+    <p class="text-center font-heading font-bold text-xl tracking-[-0.01em]">Request Your Appointment Today</p>
+    <p class="text-center font-heading font-bold text-3xl text-gold tracking-[-0.01em] mt-2">(540) 446-2610</p>
+
+    <div class="grid grid-cols-2 gap-6 mt-6 pt-6 border-t border-white/15 text-sm text-white/85">
+      <div class="space-y-1.5">
+        <p class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-gold shrink-0" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.2-.1.2-.3.3-.5.1-.2 0-.4 0-.5C10 9 9.4 7.6 9.1 7c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.3-.6-.4Z"/><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.5A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.5-1.2l-.3-.2-3 .9.9-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></svg>Text us: (540) 446-2677</p>
+        <p class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-gold shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>info@kampiedaMedicalGroup.com</p>
+      </div>
+      <div class="space-y-1.5">
+        <p class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-gold shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>8300 Boone Blvd, Ste #573, Vienna, VA 22182</p>
+        <p class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-gold shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Open Daily: 8:00 AM &ndash; 9:00 PM</p>
+      </div>
+    </div>
+
+    <p class="text-center text-xs text-white/50 mt-6">www.kampiedaMedicalGroup.com</p>
+  </div>
+
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-navy text-white/60 border-t border-white/10 no-print">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 py-6 text-center text-xs">
+    <p>&copy; 2026 KampieDa Medical Group &amp; Behavioral Health, Corp. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('print-btn').addEventListener('click', () => window.print());
+</script>
+
+</body>
+</html>
