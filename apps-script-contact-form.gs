@@ -1,7 +1,7 @@
 /**
  * KampieDa website contact form handler.
- * Deploy this as a Google Apps Script Web App under your Google Workspace
- * account, then paste the deployment URL back so the site can submit to it.
+ * Deployed as a Google Apps Script Web App under the KampieDa Google
+ * Workspace account. The site's contact form POSTs here directly.
  */
 function doPost(e) {
   try {
