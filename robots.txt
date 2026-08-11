@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kampiedamedicalgroup.com/sitemap.xml
+Sitemap: https://www.kampiedamedicalgroup.com/sitemap.xml
